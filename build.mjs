@@ -12,6 +12,8 @@ const images = [
   "truck-scenario.png",
   "university.png",
   "vive.png",
+  "vive-eye-tracker.webp",
+  "vive-facial-tracker.png",
 ];
 for (const file of files)
   await copyFile(path.join(root, file), path.join(output, file));

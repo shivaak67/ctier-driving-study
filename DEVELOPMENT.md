@@ -41,4 +41,4 @@ Image sources: `assets/SOURCES.md`. Funding acknowledgement follows the study te
 
 Public URL: https://ctier-driving-study.vercel.app
 
-Vercel is connected to shivaak67/ctier-driving-study. The production branch is feature/study-website. Pushes to that branch trigger a build and update the live site after success; other branches produce previews. Run npm test and npm run build before pushing. The build publishes only ten explicitly allowed static files in dist. Private study dashboards and participant exports are excluded. Hosted Results opens a dashboard chosen locally by the viewer.
+Vercel is connected to shivaak67/ctier-driving-study. The production branch is feature/study-website. Pushes to that branch trigger a build and update the live site after success; other branches produce previews. Run npm test and npm run build before pushing. The build publishes only an explicit allowlist of static files in dist. Private study dashboards and participant exports are excluded. Hosted Results opens a dashboard chosen locally by the viewer.
