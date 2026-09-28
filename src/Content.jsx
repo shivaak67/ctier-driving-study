@@ -388,15 +388,12 @@ export function Header({ page, pages }) {
             aria-label={"C-TIER Study home"}
           >
             <img
-              src={"assets/university.png"}
-              alt={"University of Memphis"}
-              width={"164"}
+              className="ctier-logo"
+              src="assets/ctier-logo.png"
+              alt="University of Memphis — Center for Transportation Innovations in Education and Research"
+              width="493"
+              height="64"
             />
-            <span className={"brand-divider"}></span>
-            <span>
-              <strong>{"C-TIER"}</strong>
-              <small>{"Driving Research"}</small>
-            </span>
           </a>
           <nav aria-label="Main navigation">
             {pages.map((p) => (

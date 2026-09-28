@@ -11,6 +11,7 @@ const environments = JSON.parse(
 );
 const images = [
   ...environments.map((item) => path.basename(item.src)),
+  "ctier-logo.png",
   "g923.png",
   "roadway.png",
   "shimmer.jpg",

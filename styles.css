@@ -1263,3 +1263,32 @@ button:disabled {
     grid-template-columns: 1fr;
   }
 }
+
+.brand {
+  min-width: 0;
+}
+.brand img.ctier-logo {
+  width: 440px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+@media (min-width: 761px) and (max-width: 1000px) {
+  .brand img.ctier-logo {
+    width: 380px;
+  }
+  .header-inner {
+    gap: 18px;
+  }
+  nav {
+    gap: 20px;
+  }
+}
+@media (max-width: 760px) {
+  .brand {
+    width: 100%;
+  }
+  .brand img.ctier-logo {
+    width: 440px;
+  }
+}

@@ -15,3 +15,7 @@ Names and trademarks belong to their respective owners. Public deployment and in
 ## Environment gallery
 
 `environment-01.png` through `environment-16.png`: extracted without image modification from the user-supplied `All_Environments_Subtle_Medium_Rain.pptx`, in slide order. Titles and defined simulation settings are recorded in `src/environments.json`. The user authorized showcasing all deck images on this website.
+
+## C-TIER header logo
+
+`ctier-logo.png`: exact user-supplied University of Memphis / Center for Transportation Innovations in Education and Research logo, used without raster modification. Displayed at or below its native resolution to avoid enlargement blur.
