@@ -19,7 +19,9 @@ export function Overview() {
               "\n              Understanding the driver behind the wheel.\n            "
             }
           </h1>
-          <p className="project-code">PRO-FY2026-481</p>
+          <p className="project-code">
+            <strong>IRB Approval No: PRO-FY2026-481</strong>
+          </p>
           <p className={"lead"}>
             {
               "\n              A controlled environment to explore how drivers respond to stopped\n              trucks, roadway conditions, and warning systems.\n            "

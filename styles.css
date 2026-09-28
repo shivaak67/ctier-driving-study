@@ -1292,3 +1292,8 @@ button:disabled {
     width: 440px;
   }
 }
+
+.project-code {
+  color: #003da5;
+  font-weight: 700;
+}
