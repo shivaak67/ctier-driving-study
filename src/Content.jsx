@@ -122,6 +122,31 @@ export function Overview() {
           </Reveal>
         </Reveal>
       </div>
+      <section
+        className="container collaboration-banner"
+        aria-labelledby="collaboration-title"
+      >
+        <div>
+          <p className="eyebrow">RESEARCH COLLABORATION</p>
+          <h2 id="collaboration-title">
+            In collaboration with Purdue University
+          </h2>
+        </div>
+        <a
+          href="https://www.purdue.edu/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit Purdue University"
+        >
+          <img
+            src="assets/purdue-logo.jpg"
+            alt="Purdue University"
+            width="1024"
+            height="512"
+            loading="lazy"
+          />
+        </a>
+      </section>
       <div className={"container support"}>
         <div>
           <p className={"eyebrow"}>{"RESEARCH AT THE UNIVERSITY OF MEMPHIS"}</p>

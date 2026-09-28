@@ -12,6 +12,7 @@ const environments = JSON.parse(
 const images = [
   ...environments.map((item) => path.basename(item.src)),
   "ctier-logo.png",
+  "purdue-logo.jpg",
   "g923.png",
   "roadway.png",
   "shimmer.jpg",

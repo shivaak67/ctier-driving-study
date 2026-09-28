@@ -19,3 +19,7 @@ Names and trademarks belong to their respective owners. Public deployment and in
 ## C-TIER header logo
 
 `ctier-logo.png`: exact user-supplied University of Memphis / Center for Transportation Innovations in Education and Research logo, used without raster modification. Displayed at or below its native resolution to avoid enlargement blur.
+
+## Purdue collaboration
+
+`purdue-logo.jpg`: official horizontal university signature, unchanged from https://www.purdue.edu/operations/intranet/wp-content/uploads/sites/2/2025/12/PU-H-logo1-1024x512.jpg, linked from the official Purdue logos page. Collaboration acknowledgement supplied by the study team.
