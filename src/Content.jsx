@@ -19,6 +19,7 @@ export function Overview() {
               "\n              Understanding the driver behind the wheel.\n            "
             }
           </h1>
+          <p className="project-code">PRO-FY2026-481</p>
           <p className={"lead"}>
             {
               "\n              A controlled environment to explore how drivers respond to stopped\n              trucks, roadway conditions, and warning systems.\n            "
@@ -154,6 +155,32 @@ export function Overview() {
           </a>
         </div>
       </div>
+      <section
+        className="container simulation-demo"
+        aria-labelledby="project-video-title"
+      >
+        <p className="eyebrow">PROJECT OVERVIEW</p>
+        <div className="section-heading">
+          <h2 id="project-video-title">Explore the project.</h2>
+          <a
+            href="https://www.youtube.com/watch?v=C8hefs8Mqak"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Watch on YouTube ↗
+          </a>
+        </div>
+        <div className="video-frame">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/C8hefs8Mqak"
+            title="C-TIER project overview video"
+            loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
+        </div>
+      </section>
       <div
         className={"container simulation-demo"}
         aria-labelledby={"demo-title"}

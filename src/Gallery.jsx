@@ -150,27 +150,7 @@ export function Gallery() {
         </AnimatePresence>
       </div>
       <div className="gallery-controls">
-        <motion.button
-          type="button"
-          className="button secondary"
-          disabled={index === 0}
-          onClick={() => go(index - 1)}
-          whileTap={{ scale: 0.96 }}
-          aria-label="Previous environment"
-        >
-          ← Previous
-        </motion.button>
         <p>Actual Unity screenshots · Defined simulation settings</p>
-        <motion.button
-          type="button"
-          className="button secondary"
-          disabled={index === slides.length - 1}
-          onClick={() => go(index + 1)}
-          whileTap={{ scale: 0.96 }}
-          aria-label="Next environment"
-        >
-          Next →
-        </motion.button>
       </div>
       <div
         ref={thumbs}
