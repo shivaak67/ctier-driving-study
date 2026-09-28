@@ -1,0 +1,38 @@
+# Local development
+
+Run with Node.js 20 or newer:
+
+```sh
+npm start
+npm test
+```
+
+The website is at http://127.0.0.1:4173. The server binds only to this computer's loopback interface. No deployment, hosting service, account system, or database is configured.
+
+## Architecture
+
+Semantic HTML, responsive CSS and native JavaScript ES modules. No production package dependencies, external fonts, analytics trackers or CDN scripts. Node's standard HTTP library serves a small allowlist of files; `node:test` supplies automated tests.
+
+The existing analytics dashboard is preserved as a self-contained document inside a sandboxed iframe. Its metrics are unchanged. Original single-session and approximate-alignment caveats remain visible.
+
+## Participant records
+
+Entries exist only in the active tab's memory. Download before refreshing or closing. An unload warning is requested for undownloaded records, but is not guaranteed in every browser. CSV fields are quoted, Unicode is supported, and formula-like text is neutralized. Leading-zero numeric IDs are exported as text. One ID/date pair is allowed per register; use distinct session IDs for multiple runs on one date.
+
+The consent checkbox is a researcher's verification of a separate consent process, not an online consent form. No institutional approval, eligibility criteria, or recruitment promise is inferred. The website does not launch Unity, control iMotions or change sensor settings.
+
+## Local dashboard
+
+Use Results → Open dashboard HTML, or put the existing dashboard at `private-data/dashboard.html` for automatic local loading. That directory is ignored by Git. The repository contains website code and presentation images only.
+
+## Verification
+
+Automated checks cover CSV quoting, Unicode, leading-zero IDs, formula protection, the export schema, HTTP serving, private-path restrictions and rejected POST requests. Browser checks cover required fields, adding/removing synthetic records, duplicate prevention, embedded dashboard rendering, equipment images and responsive layout.
+
+The generated CSV download link was inspected and contains the expected header and synthetic record. The Codex in-app browser did not report a completed download event; saving to disk in a standard browser remains a manual verification step. Desktop and 390px-wide layouts were inspected, with no horizontal page overflow. No browser console errors were observed.
+
+## Git workflow
+
+Work on `feature/study-website`, based on `main`. Review commits before merging. No deployment workflow is configured; pushing this private branch does not publish the website.
+
+Image sources: `assets/SOURCES.md`. Funding acknowledgement follows the study team's request and does not infer an award number. Review branding and study content before a future public release.
