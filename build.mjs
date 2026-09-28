@@ -1,11 +1,16 @@
-import { copyFile, mkdir, readdir } from "node:fs/promises";
+import { build } from "esbuild";
+import { copyFile, mkdir, readdir, readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 const root = fileURLToPath(new URL(".", import.meta.url));
 const output = path.join(root, "dist");
 await mkdir(path.join(output, "assets"), { recursive: true });
 const files = ["index.html", "styles.css", "app.js", "csv.js"];
+const environments = JSON.parse(
+  await readFile(new URL("./src/environments.json", import.meta.url), "utf8"),
+);
 const images = [
+  ...environments.map((item) => path.basename(item.src)),
   "g923.png",
   "roadway.png",
   "shimmer.jpg",
@@ -15,7 +20,17 @@ const images = [
   "vive-eye-tracker.webp",
   "vive-facial-tracker.png",
 ];
-for (const file of files)
+await build({
+  absWorkingDir: root,
+  tsconfigRaw: {},
+  entryPoints: [path.join(root, "src/main.jsx")],
+  bundle: true,
+  minify: true,
+  outfile: path.join(output, "app.js"),
+  define: { "process.env.NODE_ENV": '"production"' },
+  legalComments: "none",
+});
+for (const file of files.filter((file) => file !== "app.js"))
   await copyFile(path.join(root, file), path.join(output, file));
 for (const file of images)
   await copyFile(

@@ -1,0 +1,114 @@
+[
+  {
+    "src": "assets/environment-01.png",
+    "title": "Dawn",
+    "caption": "Time of day in the driving simulation",
+    "group": "Time of day",
+    "slide": 1
+  },
+  {
+    "src": "assets/environment-02.png",
+    "title": "Day",
+    "caption": "Time of day in the driving simulation",
+    "group": "Time of day",
+    "slide": 2
+  },
+  {
+    "src": "assets/environment-03.png",
+    "title": "Dusk",
+    "caption": "Time of day in the driving simulation",
+    "group": "Time of day",
+    "slide": 3
+  },
+  {
+    "src": "assets/environment-04.png",
+    "title": "Night",
+    "caption": "Time of day in the driving simulation",
+    "group": "Time of day",
+    "slide": 4
+  },
+  {
+    "src": "assets/environment-05.png",
+    "title": "Light Rain",
+    "caption": "1 mm/h Defined simulation rate",
+    "group": "Rain",
+    "slide": 5
+  },
+  {
+    "src": "assets/environment-06.png",
+    "title": "Medium Rain",
+    "caption": "5 mm/h Defined simulation rate",
+    "group": "Rain",
+    "slide": 6
+  },
+  {
+    "src": "assets/environment-07.png",
+    "title": "Heavy Rain",
+    "caption": "10 mm/h Defined simulation rate",
+    "group": "Rain",
+    "slide": 7
+  },
+  {
+    "src": "assets/environment-08.png",
+    "title": "Light Snow",
+    "caption": "0.5 mm/h Water equivalent Defined simulation rate",
+    "group": "Snow",
+    "slide": 8
+  },
+  {
+    "src": "assets/environment-09.png",
+    "title": "Medium Snow",
+    "caption": "1.5 mm/h Water equivalent Defined simulation rate",
+    "group": "Snow",
+    "slide": 9
+  },
+  {
+    "src": "assets/environment-10.png",
+    "title": "Heavy Snow",
+    "caption": "3 mm/h Water equivalent Defined simulation rate",
+    "group": "Snow",
+    "slide": 10
+  },
+  {
+    "src": "assets/environment-11.png",
+    "title": "Light Wind",
+    "caption": "10 mph base wind Gust-driven leaves",
+    "group": "Wind",
+    "slide": 11
+  },
+  {
+    "src": "assets/environment-12.png",
+    "title": "Medium Wind",
+    "caption": "25 mph base wind Gust-driven leaves",
+    "group": "Wind",
+    "slide": 12
+  },
+  {
+    "src": "assets/environment-13.png",
+    "title": "Heavy Wind",
+    "caption": "40 mph base wind Gust-driven leaves",
+    "group": "Wind",
+    "slide": 13
+  },
+  {
+    "src": "assets/environment-14.png",
+    "title": "Light Fog",
+    "caption": "350 m visibility setting",
+    "group": "Fog",
+    "slide": 14
+  },
+  {
+    "src": "assets/environment-15.png",
+    "title": "Medium Fog",
+    "caption": "140 m visibility setting",
+    "group": "Fog",
+    "slide": 15
+  },
+  {
+    "src": "assets/environment-16.png",
+    "title": "Heavy Fog",
+    "caption": "55 m visibility setting",
+    "group": "Fog",
+    "slide": 16
+  }
+]

@@ -35,7 +35,12 @@ export function createStudyServer() {
         res.writeHead(404).end("Not found");
         return;
       }
-      const file = path.join(root, relative);
+      const file = path.join(
+        root,
+        relative === "private-data/dashboard.html"
+          ? relative
+          : "dist/" + relative,
+      );
       const meta = await stat(file);
       if (!meta.isFile()) throw new Error("Not a file");
       res.writeHead(200, {

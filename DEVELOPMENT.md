@@ -11,7 +11,7 @@ The website is at http://127.0.0.1:4173. The server binds only to this computer'
 
 ## Architecture
 
-Semantic HTML, responsive CSS and native JavaScript ES modules. No production package dependencies, external fonts, analytics trackers or CDN scripts. Node's standard HTTP library serves a small allowlist of files; `node:test` supplies automated tests.
+React renders semantic HTML with responsive CSS. Framer Motion provides page, navigation, card, button, register, and carousel animations with reduced-motion support. esbuild bundles the pinned dependencies locally; no runtime CDN scripts or analytics are required. Node's standard HTTP library serves a small allowlist of files; `node:test` supplies automated tests.
 
 The existing analytics dashboard is preserved as a self-contained document inside a sandboxed iframe. Its metrics are unchanged. Original single-session and approximate-alignment caveats remain visible.
 
@@ -33,7 +33,7 @@ The generated CSV download link was inspected and contains the expected header a
 
 ## Git workflow
 
-Work on `feature/study-website`, based on `main`. Review commits before merging. No deployment workflow is configured; pushing this private branch does not publish the website.
+Work on `feature/study-website`, based on `main`. Review commits before merging. This branch is configured as the Vercel production branch; pushing it updates the public website after a successful build.
 
 Image sources: `assets/SOURCES.md`. Funding acknowledgement follows the study team's request and does not infer an award number. Review branding and study content before a future public release.
 

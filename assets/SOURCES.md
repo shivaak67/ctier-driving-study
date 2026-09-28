@@ -11,3 +11,7 @@ Names and trademarks belong to their respective owners. Public deployment and in
 - VIVE Focus 3 Eye Tracker: official VIVE store https://shop-us.vive.com/products/21045005 (first product image).
 - Facial Tracker for VIVE Focus Series, compatible with Focus 3: https://shop-us.vive.com/products/21045006 (first product image).
 - Simulation demo supplied by the user: https://www.youtube.com/watch?v=Ekrv8yEYvl8; embedded from YouTube, not downloaded.
+
+## Environment gallery
+
+`environment-01.png` through `environment-16.png`: extracted without image modification from the user-supplied `All_Environments_Subtle_Medium_Rain.pptx`, in slide order. Titles and defined simulation settings are recorded in `src/environments.json`. The user authorized showcasing all deck images on this website.

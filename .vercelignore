@@ -17,3 +17,7 @@
 
 !assets/vive-eye-tracker.webp
 !assets/vive-facial-tracker.png
+
+!src
+!src/**
+!assets/environment-*.png

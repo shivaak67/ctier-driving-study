@@ -8,7 +8,7 @@ after(() => new Promise((resolve) => server.close(resolve)));
 test("Home and application modules are served with the correct types", async () => {
   const page = await fetch(base);
   assert.equal(page.status, 200);
-  assert.match(await page.text(), /Participant register/);
+  assert.match(await page.text(), /id="root"/);
   const script = await fetch(base + "/app.js");
   assert.equal(script.headers.get("content-type"), "text/javascript");
 });
