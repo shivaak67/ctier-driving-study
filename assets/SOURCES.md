@@ -23,3 +23,6 @@ Names and trademarks belong to their respective owners. Public deployment and in
 ## Purdue collaboration
 
 `purdue-logo.jpg`: official horizontal university signature, unchanged from https://www.purdue.edu/operations/intranet/wp-content/uploads/sites/2/2025/12/PU-H-logo1-1024x512.jpg, linked from the official Purdue logos page. Collaboration acknowledgement supplied by the study team.
+
+- `fleet-logo.png` and `industry-members.png`: original images provided by the user on September 28, 2026, published at their request. Industry member names are shown as provided, not as individual study sponsors.
+- `nsf-logo.png`: NSF logo used on https://www.ceat-iucrc.com/ ; original asset https://static.wixstatic.com/media/4bc783_e2c2a2ff9464472aa06bbeaccd993615~mv2.png .

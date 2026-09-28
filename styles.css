@@ -1339,3 +1339,131 @@ button:disabled {
     max-width: 100%;
   }
 }
+/* Compact research branding and overview hierarchy */
+.header-logos {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-width: 0;
+}
+.header-logos > a {
+  flex-shrink: 0;
+}
+.header-logos .network-logo {
+  display: block;
+  width: 62px;
+  height: 66px;
+  object-fit: contain;
+}
+.header-logos .brand {
+  flex-shrink: 1;
+  width: auto;
+}
+.header-logos .brand img.ctier-logo {
+  width: 370px;
+  height: auto;
+}
+.header-inner {
+  min-height: 98px;
+}
+.hero {
+  padding-block: 44px;
+}
+.partners-section {
+  margin-block: 48px;
+}
+.partners-section > h2 {
+  margin-top: 0;
+  font-size: 32px;
+}
+.partners-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 24px 28px;
+}
+.partners-summary h3 {
+  font-size: 21px;
+  margin: 0 0 12px;
+}
+.partner-collaboration img {
+  width: 230px;
+  height: 100px;
+  object-fit: contain;
+}
+.partner-funding {
+  border-left: 1px solid var(--line);
+  padding-left: 28px;
+}
+.partner-funding p {
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 400px;
+}
+.industry-members {
+  margin-top: 20px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px 28px;
+}
+.industry-members summary {
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.industry-members img {
+  display: block;
+  width: min(660px, 100%);
+  height: auto;
+  margin: 24px auto 0;
+}
+@media (max-width: 1100px) {
+  .header-inner {
+    flex-wrap: wrap;
+    gap: 0;
+    padding-top: 14px;
+  }
+  .header-logos {
+    width: 100%;
+    justify-content: center;
+  }
+  .header-inner nav {
+    width: 100%;
+    justify-content: center;
+    min-height: 54px;
+  }
+}
+@media (max-width: 760px) {
+  .header-logos {
+    gap: 10px;
+  }
+  .header-logos .network-logo {
+    width: 44px;
+    height: 48px;
+  }
+  .header-logos .brand img.ctier-logo {
+    width: 100%;
+    max-width: 370px;
+  }
+  .header-logos .brand {
+    min-width: 0;
+  }
+  .hero {
+    padding-block: 28px;
+  }
+  .partners-summary {
+    grid-template-columns: 1fr;
+    padding: 22px;
+    gap: 18px;
+  }
+  .partner-funding {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+    padding: 20px 0 0;
+  }
+  .industry-members {
+    padding: 20px;
+  }
+}

@@ -5,6 +5,14 @@ function today() {
   const d = new Date();
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 }
+const experimentTimes = Array.from({ length: 15 }, (_, index) => {
+  const hours = 10 + Math.floor(index / 2);
+  const minutes = index % 2 === 0 ? "00" : "30";
+  return {
+    value: `${String(hours).padStart(2, "0")}:${minutes}`,
+    label: `${hours % 12 || 12}:${minutes} ${hours < 12 ? "AM" : "PM"}`,
+  };
+});
 export function Participants() {
   const [records, setRecords] = useState([]);
   const [status, setStatus] = useState("");
@@ -121,7 +129,7 @@ export function Participants() {
                 />
               </label>
               <label>
-                {"Session date *"}
+                {"Experiment date *"}
                 <input
                   name={"sessionDate"}
                   type={"date"}
@@ -129,6 +137,27 @@ export function Participants() {
                   defaultValue={today()}
                 />
               </label>
+              <label>
+                {"Experiment time *"}
+                <select
+                  name={"experimentTime"}
+                  required
+                  aria-describedby="experiment-time-help"
+                >
+                  <option value="">Choose a time</option>
+                  {experimentTimes.map((time) => (
+                    <option key={time.value} value={time.value}>
+                      {time.label}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <p id="experiment-time-help" className="full muted">
+                <strong>Estimated experiment duration: 50–60 minutes.</strong>
+                <br />
+                10:00 AM–5:00 PM, Memphis (Central Time). This records your
+                preferred time; it does not reserve an appointment.
+              </p>
               <label>
                 {"Age group"}
                 <select name={"ageGroup"}>
@@ -154,45 +183,24 @@ export function Participants() {
                 </select>
               </label>
               <label>
-                {"Years of driving experience"}
+                {"Years of driving experience *"}
                 <input
                   name={"drivingYears"}
                   type={"number"}
                   min={"0"}
                   max={"100"}
                   step={"1"}
-                  placeholder={"Optional"}
+                  required
                 />
               </label>
               <label>
-                {"Scenario *"}
-                <select name={"scenario"} required>
-                  <option value={""}>{"Select a scenario"}</option>
-                  <option>{"Straight roadway \u2014 shoulder stop"}</option>
-                  <option>{"Straight roadway \u2014 outer-lane stop"}</option>
-                  <option>{"Curve roadway"}</option>
-                  <option>{"Uphill roadway"}</option>
-                  <option>{"Other / custom route"}</option>
-                </select>
-              </label>
-              <label>
-                {"Warning condition"}
-                <select name={"warning"}>
-                  <option>{"Not assigned"}</option>
-                  <option>{"No warning"}</option>
-                  <option>{"Triangle"}</option>
-                  <option>{"Beacon"}</option>
-                  <option>{"LED screen"}</option>
-                  <option>{"V2V dashboard"}</option>
-                  <option>{"V2V navigation"}</option>
-                </select>
-              </label>
-              <label>
-                {"Display mode"}
-                <select name={"display"}>
-                  <option>{"Desktop"}</option>
-                  <option>{"VIVE Focus 3"}</option>
-                </select>
+                {"Occupation"}
+                <input
+                  name={"occupation"}
+                  maxLength={"100"}
+                  autoComplete={"off"}
+                  placeholder={"e.g. Student, engineer, retired"}
+                />
               </label>
               <label className={"full"}>
                 {"Session notes"}
@@ -256,7 +264,13 @@ export function Participants() {
                     <div>
                       <strong>{r.participantId}</strong>
                       <small>
-                        {r.sessionDate} · {r.scenario}
+                        {r.sessionDate} ·{" "}
+                        {
+                          experimentTimes.find(
+                            (time) => time.value === r.experimentTime,
+                          )?.label
+                        }{" "}
+                        CT
                       </small>
                     </div>
                     <button

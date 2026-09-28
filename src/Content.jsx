@@ -80,102 +80,6 @@ export function Overview() {
           <p>{"Explore vehicle, traffic, and skin-conductance data."}</p>
         </div>
       </div>
-      <div className={"container section-block"}>
-        <div className={"section-heading"}>
-          <div>
-            <p className={"eyebrow"}>{"THE STUDY"}</p>
-            <h2>{"One drive. Multiple perspectives."}</h2>
-          </div>
-          <p>
-            {
-              "\n              Bring road conditions, driver actions, and measured responses into\n              the same research workflow.\n            "
-            }
-          </p>
-        </div>
-        <Reveal className={"perspectives"} as="div">
-          <Reveal as="article">
-            <span className={"small-index"}>{"01 / ROADWAY"}</span>
-            <h3>{"The driving environment"}</h3>
-            <p>
-              {
-                "\n                Study a stopped-truck encounter within a simulated highway.\n                Route completion provides a clear end to each driving task.\n              "
-              }
-            </p>
-          </Reveal>
-          <Reveal as="article">
-            <span className={"small-index"}>{"02 / BEHAVIOR"}</span>
-            <h3>{"The driver's decisions"}</h3>
-            <p>
-              {
-                "\n                Review speed, steering, throttle, braking, and proximity to the\n                truck alongside surrounding traffic.\n              "
-              }
-            </p>
-          </Reveal>
-          <Reveal as="article">
-            <span className={"small-index"}>{"03 / RESPONSE"}</span>
-            <h3>{"The recorded signal"}</h3>
-            <p>
-              {
-                "\n                Inspect Shimmer skin-conductance measurements and iMotions event\n                markers alongside simulation data.\n              "
-              }
-            </p>
-          </Reveal>
-        </Reveal>
-      </div>
-      <section
-        className="container collaboration-banner"
-        aria-labelledby="collaboration-title"
-      >
-        <div>
-          <p className="eyebrow">RESEARCH COLLABORATION</p>
-          <h2 id="collaboration-title">
-            In collaboration with Purdue University
-          </h2>
-        </div>
-        <a
-          href="https://www.purdue.edu/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Visit Purdue University"
-        >
-          <img
-            src="assets/purdue-logo.jpg"
-            alt="Purdue University"
-            width="1024"
-            height="512"
-            loading="lazy"
-          />
-        </a>
-      </section>
-      <div className={"container support"}>
-        <div>
-          <p className={"eyebrow"}>{"RESEARCH AT THE UNIVERSITY OF MEMPHIS"}</p>
-          <h2>
-            {"Connected research."}
-            <br />
-            {"Safer transportation."}
-          </h2>
-        </div>
-        <div className={"funding"}>
-          <span>{"Funding acknowledgement"}</span>
-          <strong>{"NSF\u2013IUCRC"}</strong>
-          <p>
-            {"\n              National Science Foundation"}
-            <br />
-            {
-              "Industry\u2013University Cooperative\n              Research Centers\n            "
-            }
-          </p>
-          <a
-            href={"https://iucrc.nsf.gov/"}
-            target={"_blank"}
-            rel={"noopener noreferrer"}
-          >
-            {"About the program \u2197"}
-          </a>
-        </div>
-      </div>
-
       <div
         className={"container simulation-demo"}
         aria-labelledby={"demo-title"}
@@ -210,6 +114,64 @@ export function Overview() {
         </div>
       </div>
       <Gallery />
+      <section
+        className="container partners-section"
+        aria-labelledby="partners-title"
+      >
+        <p className="eyebrow">RESEARCH NETWORK</p>
+        <h2 id="partners-title">Research partners</h2>
+        <div className="partners-summary">
+          <div className="partner-collaboration">
+            <h3>In collaboration with Purdue University</h3>
+            <a
+              href="https://www.purdue.edu/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/purdue-logo.jpg"
+                alt="Purdue University"
+                width="1024"
+                height="512"
+                loading="lazy"
+              />
+            </a>
+          </div>
+          <div className="partner-funding">
+            <p className="eyebrow">FUNDING &amp; CENTER INFORMATION</p>
+            <h3>
+              <a
+                href="https://www.ceat-iucrc.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                NSF–IUCRC / FLEET ↗
+              </a>
+            </h3>
+            <p>
+              National Science Foundation Industry–University Cooperative
+              Research Center
+            </p>
+            <a
+              href="https://ctier.memphis.edu/projects"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              C-TIER research projects ↗
+            </a>
+          </div>
+        </div>
+        <details className="industry-members" open>
+          <summary>Industry members</summary>
+          <img
+            src="assets/industry-members.png"
+            alt="Industry members: Applied Research Institute, FedEx Institute of Technology at the University of Memphis, Tennessee Valley Authority, Start Co., Cummins, Wabash, and FedEx Corporation"
+            width="925"
+            height="573"
+            loading="lazy"
+          />
+        </details>
+      </section>
     </section>
   );
 }
@@ -399,29 +361,47 @@ export function Equipment() {
 export function Header({ page, pages }) {
   return (
     <>
-      <div className={"university-bar"}>
-        <div className={"container"}>
-          <span>{"UNIVERSITY OF MEMPHIS"}</span>
-          <span>
-            {"Center for Transportation Innovations in Education and Research"}
-          </span>
-        </div>
-      </div>
       <header className={"header"}>
         <div className={"container header-inner"}>
-          <a
-            href={"#overview"}
-            className={"brand"}
-            aria-label={"C-TIER Study home"}
-          >
-            <img
-              className="ctier-logo"
-              src="assets/ctier-logo.png"
-              alt="University of Memphis — Center for Transportation Innovations in Education and Research"
-              width="493"
-              height="64"
-            />
-          </a>
+          <div className="header-logos">
+            <a
+              href="https://www.ceat-iucrc.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="NSF–IUCRC center"
+            >
+              <img
+                className="network-logo"
+                src="assets/nsf-logo.png"
+                alt="National Science Foundation"
+              />
+            </a>
+            <a
+              href="https://www.ceat-iucrc.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="FLEET center"
+            >
+              <img
+                className="network-logo"
+                src="assets/fleet-logo.png"
+                alt="FLEET — Logistics, Automation, Sustainment"
+              />
+            </a>
+            <a
+              href={"#overview"}
+              className={"brand"}
+              aria-label={"C-TIER Study home"}
+            >
+              <img
+                className="ctier-logo"
+                src="assets/ctier-logo.png"
+                alt="University of Memphis — Center for Transportation Innovations in Education and Research"
+                width="493"
+                height="64"
+              />
+            </a>
+          </div>
           <nav aria-label="Main navigation">
             {pages.map((p) => (
               <a
@@ -439,10 +419,6 @@ export function Header({ page, pages }) {
               </a>
             ))}
           </nav>
-          <span className={"local-badge"}>
-            <i></i>
-            {"Study workspace"}
-          </span>
         </div>
       </header>
     </>
@@ -457,7 +433,13 @@ export function Footer() {
           <p>{"Driving simulation research workspace"}</p>
         </div>
         <div>
-          <span>{"NSF\u2013IUCRC"}</span>
+          <a
+            href="https://www.ceat-iucrc.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            NSF–IUCRC
+          </a>
           <a
             href={"https://memphisregionsltravelsurvey.netlify.app/"}
             target={"_blank"}

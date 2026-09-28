@@ -1,12 +1,11 @@
 export const columns = [
   ["participantId", "Participant ID"],
-  ["sessionDate", "Session date"],
+  ["sessionDate", "Experiment date"],
+  ["experimentTime", "Experiment time (Memphis Central Time)"],
   ["ageGroup", "Age group"],
   ["gender", "Gender"],
   ["drivingYears", "Years driving"],
-  ["scenario", "Scenario"],
-  ["warning", "Warning condition"],
-  ["display", "Display mode"],
+  ["occupation", "Occupation"],
   ["consentVerified", "Consent verified by researcher"],
   ["notes", "Session notes"],
 ];

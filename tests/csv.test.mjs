@@ -30,6 +30,6 @@ test("Template and records share a stable schema with BOM and CRLF", () => {
   assert.equal(template.split("\r\n").length, 2);
   const csv = makeCsv([{ participantId: "P001", consentVerified: "Yes" }]);
   assert.ok(csv.includes('"P001"'));
-  assert.equal(columns.length, 10);
+  assert.equal(columns.length, 9);
   assert.equal(csv.split("\r\n").length, 3);
 });

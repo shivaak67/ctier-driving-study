@@ -30,10 +30,7 @@ export function Gallery() {
       <div className="section-heading">
         <div>
           <h2 id="gallery-title">One roadway. Changing conditions.</h2>
-          <p>
-            Slide through all 16 views from the simulation. Drag, swipe, or use
-            the arrows.
-          </p>
+          <p>Explore 16 conditions. Swipe or use the arrows.</p>
         </div>
         <span className="gallery-count" aria-live="polite">
           {index + 1} / {slides.length}
