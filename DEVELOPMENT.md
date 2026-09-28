@@ -7,7 +7,7 @@ npm start
 npm test
 ```
 
-The website is at http://127.0.0.1:4173. The server binds only to this computer's loopback interface. No deployment, hosting service, account system, or database is configured.
+The website is at http://127.0.0.1:4173. The server binds only to this computer's loopback interface. The public website is hosted on Vercel; no account system or database is configured.
 
 ## Architecture
 
@@ -36,3 +36,9 @@ The generated CSV download link was inspected and contains the expected header a
 Work on `feature/study-website`, based on `main`. Review commits before merging. No deployment workflow is configured; pushing this private branch does not publish the website.
 
 Image sources: `assets/SOURCES.md`. Funding acknowledgement follows the study team's request and does not infer an award number. Review branding and study content before a future public release.
+
+## Vercel deployment
+
+Public URL: https://ctier-driving-study.vercel.app
+
+Vercel is connected to shivaak67/ctier-driving-study. The production branch is feature/study-website. Pushes to that branch trigger a build and update the live site after success; other branches produce previews. Run npm test and npm run build before pushing. The build publishes only ten explicitly allowed static files in dist. Private study dashboards and participant exports are excluded. Hosted Results opens a dashboard chosen locally by the viewer.
