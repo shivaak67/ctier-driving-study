@@ -1,3 +1,4 @@
+import { Partners } from "./Partners.jsx";
 import React from "react";
 import { motion } from "framer-motion";
 import { Reveal } from "./motion.jsx";
@@ -33,7 +34,7 @@ export function Overview() {
               <span aria-hidden={"true"}>{"\u2197"}</span>
             </a>
             <a className={"text-link"} href={"#results"}>
-              {"Explore session results \u2192"}
+              {"Research & contacts \u2192"}
             </a>
           </div>
           <div className={"hero-notes"}>
@@ -115,62 +116,23 @@ export function Overview() {
       </div>
       <Gallery />
       <section
-        className="container partners-section"
-        aria-labelledby="partners-title"
+        className="container overview-contacts"
+        aria-labelledby="overview-contacts-title"
       >
-        <p className="eyebrow">RESEARCH NETWORK</p>
-        <h2 id="partners-title">Research partners</h2>
-        <div className="partners-summary">
-          <div className="partner-collaboration">
-            <h3>In collaboration with Purdue University</h3>
-            <a
-              href="https://www.purdue.edu/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="assets/purdue-logo.jpg"
-                alt="Purdue University"
-                width="1024"
-                height="512"
-                loading="lazy"
-              />
-            </a>
-          </div>
-          <div className="partner-funding">
-            <p className="eyebrow">FUNDING &amp; CENTER INFORMATION</p>
-            <h3>
-              <a
-                href="https://www.ceat-iucrc.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                NSF–IUCRC / FLEET ↗
-              </a>
-            </h3>
-            <p>
-              National Science Foundation Industry–University Cooperative
-              Research Center
-            </p>
-            <a
-              href="https://ctier.memphis.edu/projects"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              C-TIER research projects ↗
-            </a>
-          </div>
+        <h2 id="overview-contacts-title">Study contacts &amp; collaboration</h2>
+        <div className="investigator-grid">
+          <article className="investigator-card">
+            <p className="eyebrow">Principal Investigator</p>
+            <h3>Dr. Sabyasachee Mishra</h3>
+            <a href="mailto:smishra3@memphis.edu">smishra3@memphis.edu</a>
+          </article>
+          <article className="investigator-card">
+            <p className="eyebrow">Investigator</p>
+            <h3>Md Tawkir Ahmed</h3>
+            <a href="mailto:mahmed8@memphis.edu">mahmed8@memphis.edu</a>
+          </article>
         </div>
-        <details className="industry-members" open>
-          <summary>Industry members</summary>
-          <img
-            src="assets/industry-members.png"
-            alt="Industry members: Applied Research Institute, FedEx Institute of Technology at the University of Memphis, Tennessee Valley Authority, Start Co., Cummins, Wabash, and FedEx Corporation"
-            width="925"
-            height="573"
-            loading="lazy"
-          />
-        </details>
+        <Partners compact />
       </section>
     </section>
   );
@@ -409,7 +371,9 @@ export function Header({ page, pages }) {
                 href={"#" + p}
                 aria-current={page === p ? "page" : undefined}
               >
-                {p[0].toUpperCase() + p.slice(1)}
+                {p === "results"
+                  ? "Research & Contacts"
+                  : p[0].toUpperCase() + p.slice(1)}
                 {page === p && (
                   <motion.span
                     className="nav-indicator"
@@ -440,8 +404,9 @@ export function Footer() {
           >
             NSF–IUCRC
           </a>
+
           <a
-            href={"https://memphisregionsltravelsurvey.netlify.app/"}
+            href={"https://ctier.memphis.edu/projects"}
             target={"_blank"}
             rel={"noopener noreferrer"}
           >

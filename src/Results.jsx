@@ -1,3 +1,4 @@
+import { Partners } from "./Partners.jsx";
 import { Reveal } from "./motion.jsx";
 import React, { useState, useEffect } from "react";
 export function Results() {
@@ -41,13 +42,13 @@ export function Results() {
       aria-labelledby={"results-title"}
     >
       <div className={"container section-block"}>
-        <p className={"eyebrow"}>{"SESSION ANALYSIS"}</p>
+        <p className={"eyebrow"}>{"RESEARCH NETWORK"}</p>
         <h1 className={"page-title"} id={"results-title"}>
-          {"\n            Evidence from the drive.\n          "}
+          {"\n            Research & Contacts.\n          "}
         </h1>
         <p className={"lead narrow"}>
           {
-            "\n            Open the combined dashboard to explore driving behavior, surrounding\n            vehicles, and skin conductance.\n          "
+            "\n            Meet the study team and explore our research collaborations.\n          "
           }
         </p>
         <section
@@ -68,52 +69,56 @@ export function Results() {
             </Reveal>
           </div>
         </section>
-        <div className={"notice"}>
-          <strong>{"Exploratory results."}</strong>
-          {
-            " The existing dashboard\n            describes one test session. Its approximate time alignment and\n            observed correlations do not establish causation or validate\n            synchronization accuracy.\n          "
-          }
-        </div>
-        <div className={"result-toolbar"}>
-          <div>
-            <h2>{"Combined driving dashboard"}</h2>
-            <p role="status">{dashboardStatus}</p>
+        <Partners />
+        <details className="session-analysis">
+          <summary>Session dashboard</summary>
+          <div className={"notice"}>
+            <strong>{"Exploratory results."}</strong>
+            {
+              " The existing dashboard\n            describes one test session. Its approximate time alignment and\n            observed correlations do not establish causation or validate\n            synchronization accuracy.\n          "
+            }
           </div>
-          <label className={"button secondary file-button"}>
-            {"Open dashboard HTML"}
-            <input
-              id={"dashboard-file"}
-              type={"file"}
-              accept={".html,text/html"}
-              onChange={openFile}
+          <div className={"result-toolbar"}>
+            <div>
+              <h2>{"Combined driving dashboard"}</h2>
+              <p role="status">{dashboardStatus}</p>
+            </div>
+            <label className={"button secondary file-button"}>
+              {"Open dashboard HTML"}
+              <input
+                id={"dashboard-file"}
+                type={"file"}
+                accept={".html,text/html"}
+                onChange={openFile}
+              />
+            </label>
+          </div>
+          <div
+            id={"dashboard-placeholder"}
+            className={"dashboard-placeholder"}
+            hidden={!!dashboard}
+          >
+            <img
+              src={"assets/truck-scenario.png"}
+              alt={"Stopped truck on the shoulder of the simulated highway"}
             />
-          </label>
-        </div>
-        <div
-          id={"dashboard-placeholder"}
-          className={"dashboard-placeholder"}
-          hidden={!!dashboard}
-        >
-          <img
-            src={"assets/truck-scenario.png"}
-            alt={"Stopped truck on the shoulder of the simulated highway"}
-          />
-          <div>
-            <h3>{"Your session, in context."}</h3>
-            <p>
-              {
-                "\n                Select your combined dashboard HTML file. It opens only in this\n                tab and is not uploaded.\n              "
-              }
-            </p>
+            <div>
+              <h3>{"Your session, in context."}</h3>
+              <p>
+                {
+                  "\n                Select your combined dashboard HTML file. It opens only in this\n                tab and is not uploaded.\n              "
+                }
+              </p>
+            </div>
           </div>
-        </div>
-        <iframe
-          id={"dashboard-frame"}
-          title={"Combined straight-road driving analysis"}
-          sandbox={"allow-scripts allow-downloads"}
-          hidden={!dashboard}
-          srcDoc={dashboard}
-        ></iframe>
+          <iframe
+            id={"dashboard-frame"}
+            title={"Combined straight-road driving analysis"}
+            sandbox={"allow-scripts allow-downloads"}
+            hidden={!dashboard}
+            srcDoc={dashboard}
+          ></iframe>
+        </details>
       </div>
     </section>
   );
