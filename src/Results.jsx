@@ -1,3 +1,4 @@
+import { Reveal } from "./motion.jsx";
 import React, { useState, useEffect } from "react";
 export function Results() {
   const [dashboard, setDashboard] = useState("");
@@ -49,6 +50,24 @@ export function Results() {
             "\n            Open the combined dashboard to explore driving behavior, surrounding\n            vehicles, and skin conductance.\n          "
           }
         </p>
+        <section
+          className="investigator-section"
+          aria-labelledby="investigator-title"
+        >
+          <h2 id="investigator-title">Study investigators</h2>
+          <div className="investigator-grid">
+            <Reveal as="article" className="investigator-card">
+              <p className="eyebrow">Principal Investigator</p>
+              <h3>Dr. Sabyasachee Mishra</h3>
+              <a href="mailto:smishra3@memphis.edu">smishra3@memphis.edu</a>
+            </Reveal>
+            <Reveal as="article" className="investigator-card">
+              <p className="eyebrow">Investigator</p>
+              <h3>Md Tawkir Ahmed</h3>
+              <a href="mailto:mahmed8@memphis.edu">mahmed8@memphis.edu</a>
+            </Reveal>
+          </div>
+        </section>
         <div className={"notice"}>
           <strong>{"Exploratory results."}</strong>
           {

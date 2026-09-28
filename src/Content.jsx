@@ -40,33 +40,26 @@ export function Overview() {
             <span>{"Skin conductance"}</span>
           </div>
         </div>
-        <figure className={"hero-visual"}>
-          <img
-            src={"assets/roadway.png"}
-            alt={
-              "Aerial view of the study's simulated divided highway with ramps"
-            }
-            fetchpriority={"high"}
-          />
-          <div className={"visual-overlay"}>
-            <span className={"image-label"}>
-              {"THE VIRTUAL TEST ENVIRONMENT"}
-            </span>
-            <strong>
-              {"Real decisions."}
-              <br />
-              {"Controlled conditions."}
-            </strong>
-            <span className={"image-caption"}>
-              {"Straight roadway \u00b7 shoulder-stop scenario"}
-            </span>
+        <div className="hero-video">
+          <p className="eyebrow">PROJECT OVERVIEW</p>
+          <div className="video-frame">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/C8hefs8Mqak"
+              title="C-TIER project overview video"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
           </div>
-          <figcaption>
-            {
-              "\n              Actual simulation environment from the study\n            "
-            }
-          </figcaption>
-        </figure>
+          <a
+            className="text-link"
+            href="https://www.youtube.com/watch?v=C8hefs8Mqak"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Watch on YouTube ↗
+          </a>
+        </div>
       </div>
       <div className={"container research-strip"}>
         <div>
@@ -155,32 +148,7 @@ export function Overview() {
           </a>
         </div>
       </div>
-      <section
-        className="container simulation-demo"
-        aria-labelledby="project-video-title"
-      >
-        <p className="eyebrow">PROJECT OVERVIEW</p>
-        <div className="section-heading">
-          <h2 id="project-video-title">Explore the project.</h2>
-          <a
-            href="https://www.youtube.com/watch?v=C8hefs8Mqak"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Watch on YouTube ↗
-          </a>
-        </div>
-        <div className="video-frame">
-          <iframe
-            src="https://www.youtube-nocookie.com/embed/C8hefs8Mqak"
-            title="C-TIER project overview video"
-            loading="lazy"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          />
-        </div>
-      </section>
+
       <div
         className={"container simulation-demo"}
         aria-labelledby={"demo-title"}
