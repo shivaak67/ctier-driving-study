@@ -438,13 +438,6 @@ h3 {
   height: 100%;
   object-fit: contain;
 }
-.equipment-photo.shimmer {
-  padding: 0;
-}
-.shimmer img {
-  object-fit: cover;
-  object-position: 50% 81%;
-}
 .card-body {
   padding: 25px;
 }

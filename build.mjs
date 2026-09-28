@@ -8,7 +8,7 @@ const files = ["index.html", "styles.css", "app.js", "csv.js"];
 const images = [
   "g923.png",
   "roadway.png",
-  "shimmer.png",
+  "shimmer.jpg",
   "truck-scenario.png",
   "university.png",
   "vive.png",
