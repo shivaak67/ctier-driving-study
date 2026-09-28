@@ -100,20 +100,51 @@ export function Gallery() {
             }}
             style={{ touchAction: "pan-y" }}
           >
-            <img
-              src={current.src}
-              alt={`${current.title}: simulated highway from the driver's seat`}
-              draggable="false"
-              width="1280"
-              height="720"
-            />
+            <div className="gallery-image-wrap">
+              <img
+                src={current.src}
+                alt={`${current.title}: simulated highway from the driver's seat`}
+                draggable="false"
+                width="1280"
+                height="720"
+              />
+              {[-1, 1].map((step) => (
+                <motion.button
+                  key={step}
+                  type="button"
+                  className={`gallery-overlay-arrow ${step < 0 ? "left" : "right"}`}
+                  aria-label={step < 0 ? "Previous image" : "Next image"}
+                  disabled={
+                    step < 0 ? index === 0 : index === slides.length - 1
+                  }
+                  onPointerDown={(event) => event.stopPropagation()}
+                  onClick={() => go(index + step)}
+                  whileTap={reduce ? undefined : { scale: 0.94 }}
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d={step < 0 ? "M15 5l-7 7 7 7" : "M9 5l7 7-7 7"}
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </motion.button>
+              ))}
+            </div>
             <figcaption>
               <div>
                 <span className="small-index">{current.group}</span>
                 <h3>{current.title}</h3>
                 <p>{current.caption}</p>
               </div>
-              <span>Slide {current.slide} of 16</span>
             </figcaption>
           </motion.figure>
         </AnimatePresence>
