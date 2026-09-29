@@ -64,23 +64,6 @@ export function Overview() {
           </a>
         </div>
       </div>
-      <div className={"container research-strip"}>
-        <div>
-          <span className={"strip-number"}>{"01"}</span>
-          <strong>{"Drive the scenario"}</strong>
-          <p>{"Complete a goal-oriented route in the simulator."}</p>
-        </div>
-        <div>
-          <span className={"strip-number"}>{"02"}</span>
-          <strong>{"Capture the response"}</strong>
-          <p>{"Record driving behavior and physiological signals."}</p>
-        </div>
-        <div>
-          <span className={"strip-number"}>{"03"}</span>
-          <strong>{"Review the evidence"}</strong>
-          <p>{"Explore vehicle, traffic, and skin-conductance data."}</p>
-        </div>
-      </div>
       <div
         className={"container simulation-demo"}
         aria-labelledby={"demo-title"}
@@ -291,31 +274,6 @@ export function Equipment() {
             </div>
           </Reveal>
         </div>
-        <Reveal className={"workflow"} as="div">
-          <div>
-            <p className={"eyebrow"}>{"RECORDING WORKFLOW"}</p>
-            <h2>{"From simulation to analysis."}</h2>
-            <p>
-              {
-                "\n                Unity sends event markers to iMotions on the collection laptop.\n                Recording and marker checks are required for each session; this\n                website does not control either application.\n              "
-              }
-            </p>
-          </div>
-          <ol>
-            <li>
-              <strong>{"Unity"}</strong>
-              <span>{"Route events & vehicle telemetry"}</span>
-            </li>
-            <li>
-              <strong>{"iMotions + Shimmer"}</strong>
-              <span>{"Physiological signals & received markers"}</span>
-            </li>
-            <li>
-              <strong>{"Session dashboard"}</strong>
-              <span>{"Review recordings and exploratory relationships"}</span>
-            </li>
-          </ol>
-        </Reveal>
       </div>
     </section>
   );
