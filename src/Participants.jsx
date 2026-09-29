@@ -154,9 +154,6 @@ export function Participants() {
               </label>
               <p id="experiment-time-help" className="full muted">
                 <strong>Estimated experiment duration: 50–60 minutes.</strong>
-                <br />
-                10:00 AM–5:00 PM, Memphis (Central Time). This records your
-                preferred time; it does not reserve an appointment.
               </p>
               <label>
                 {"Age group"}
