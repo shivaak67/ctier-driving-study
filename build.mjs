@@ -10,6 +10,7 @@ const environments = JSON.parse(
   await readFile(new URL("./src/environments.json", import.meta.url), "utf8"),
 );
 const images = [
+  "registration-qr.svg",
   ...environments.map((item) => path.basename(item.src)),
   "ctier-logo.png",
   "nsf-logo.png",

@@ -1526,3 +1526,23 @@ button:disabled {
   margin: 2px 0 0;
   color: var(--navy);
 }
+
+.study-registration {
+  margin-top: 32px;
+}
+.registration-intro > p {
+  line-height: 1.7;
+}
+.registration-intro .button {
+  margin-top: 12px;
+}
+.registration-qr {
+  text-align: center;
+}
+.registration-qr img {
+  display: block;
+  width: 240px;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+}
