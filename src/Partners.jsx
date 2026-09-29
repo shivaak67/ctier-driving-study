@@ -31,8 +31,11 @@ export function Partners({ compact = false }) {
         </div>
       </div>
       {!compact && (
-        <details className="industry-members" open>
-          <summary>Industry members</summary>
+        <section
+          className="industry-members"
+          aria-labelledby="industry-members-title"
+        >
+          <h3 id="industry-members-title">Industry members</h3>
           <img
             src="assets/industry-members.png"
             alt="Industry members: Applied Research Institute, FedEx Institute of Technology at the University of Memphis, Tennessee Valley Authority, Start Co., Cummins, Wabash, and FedEx Corporation"
@@ -40,7 +43,7 @@ export function Partners({ compact = false }) {
             height="573"
             loading="lazy"
           />
-        </details>
+        </section>
       )}
     </section>
   );
