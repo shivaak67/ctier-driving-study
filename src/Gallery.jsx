@@ -40,8 +40,9 @@ export function Gallery() {
       <p className="eyebrow">EXPLORE THE ENVIRONMENTS</p>
       <div className="section-heading">
         <div>
-          <h2 id="gallery-title">One roadway. Changing conditions.</h2>
-          <p>Explore 16 conditions. Swipe or use the arrows.</p>
+          <h2 id="gallery-title">
+            Explore 16 conditions. Swipe or use the arrows.
+          </h2>
         </div>
         <span className="gallery-count" aria-live="polite">
           {index + 1} / {slides.length}
