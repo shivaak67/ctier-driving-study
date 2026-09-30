@@ -34,7 +34,7 @@ export function Participants() {
               rel="noopener noreferrer"
               whileTap={{ scale: 0.97 }}
             >
-              Register for the study <span aria-hidden="true">↗</span>
+              Register for the study
             </motion.a>
             <p className="muted">
               Opens Google Forms. The research team will email you to confirm

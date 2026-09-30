@@ -14,11 +14,22 @@ export function Gallery() {
     const value = Math.max(0, Math.min(slides.length - 1, next));
     setDirection(value > index ? 1 : -1);
     setIndex(value);
-    thumbs.current?.children[value]?.scrollIntoView({
-      behavior: reduce ? "instant" : "smooth",
-      block: "nearest",
-      inline: "center",
-    });
+    const strip = thumbs.current;
+    const thumbnail = strip?.children[value];
+    if (strip && thumbnail) {
+      const stripBounds = strip.getBoundingClientRect();
+      const thumbnailBounds = thumbnail.getBoundingClientRect();
+      // Scroll only the thumbnail strip; scrolling an element into view
+      // also moves the page when the strip is below the viewport.
+      strip.scrollTo({
+        left:
+          strip.scrollLeft +
+          thumbnailBounds.left -
+          stripBounds.left -
+          (strip.clientWidth - thumbnailBounds.width) / 2,
+        behavior: reduce ? "instant" : "smooth",
+      });
+    }
   }
   return (
     <section

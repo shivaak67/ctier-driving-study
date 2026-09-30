@@ -31,7 +31,6 @@ export function Overview() {
           <div className={"actions"}>
             <a className={"button primary"} href={"#participants"}>
               {"Register a participant "}
-              <span aria-hidden={"true"}>{"\u2197"}</span>
             </a>
             <a className={"text-link"} href={"#results"}>
               {"Research & contacts \u2192"}
@@ -60,7 +59,7 @@ export function Overview() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Watch on YouTube ↗
+            Watch on YouTube
           </a>
         </div>
       </div>
@@ -81,7 +80,7 @@ export function Overview() {
             target={"_blank"}
             rel={"noopener noreferrer"}
           >
-            {"Watch on YouTube \u2197"}
+            {"Watch on YouTube"}
           </a>
         </div>
         <div className={"video-frame"}>
@@ -161,7 +160,7 @@ export function Equipment() {
                 target={"_blank"}
                 rel={"noopener noreferrer"}
               >
-                {"Manufacturer details \u2197"}
+                {"Manufacturer details"}
               </a>
             </div>
           </Reveal>
@@ -186,7 +185,7 @@ export function Equipment() {
                 target={"_blank"}
                 rel={"noopener noreferrer"}
               >
-                {"Manufacturer details \u2197"}
+                {"Manufacturer details"}
               </a>
             </div>
           </Reveal>
@@ -215,7 +214,7 @@ export function Equipment() {
                 target={"_blank"}
                 rel={"noopener noreferrer"}
               >
-                {"Manufacturer image & details \u2197"}
+                {"Manufacturer image & details"}
               </a>
             </div>
           </Reveal>
@@ -242,7 +241,7 @@ export function Equipment() {
                 target={"_blank"}
                 rel={"noopener noreferrer"}
               >
-                {"Manufacturer details \u2197"}
+                {"Manufacturer details"}
               </a>
             </div>
           </Reveal>
@@ -269,7 +268,7 @@ export function Equipment() {
                 target={"_blank"}
                 rel={"noopener noreferrer"}
               >
-                {"Manufacturer details \u2197"}
+                {"Manufacturer details"}
               </a>
             </div>
           </Reveal>
@@ -368,14 +367,14 @@ export function Footer() {
             target={"_blank"}
             rel={"noopener noreferrer"}
           >
-            {"Related C-TIER research \u2197"}
+            {"Related C-TIER research"}
           </a>
           <a
             href={"https://www.youtube.com/watch?v=NfMQfq5Bkow"}
             target={"_blank"}
             rel={"noopener noreferrer"}
           >
-            {"FLEET project video \u2197"}
+            {"FLEET project video"}
           </a>
         </div>
       </div>
