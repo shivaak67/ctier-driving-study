@@ -16,9 +16,7 @@ export function Overview() {
             {"HUMAN FACTORS \u00b7 DRIVING SIMULATION"}
           </p>
           <h1 id={"overview-title"}>
-            {
-              "\n              Understanding the driver behind the wheel.\n            "
-            }
+            Driver Responses to Roadside Warning Systems
           </h1>
           <p className="project-code">
             <strong>IRB Approval No: PRO-FY2026-481</strong>
