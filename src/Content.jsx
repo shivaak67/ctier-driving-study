@@ -51,14 +51,6 @@ export function Overview() {
               allowFullScreen
             />
           </div>
-          <a
-            className="text-link"
-            href="https://www.youtube.com/watch?v=C8hefs8Mqak"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Watch on YouTube
-          </a>
         </div>
       </div>
       <div
@@ -73,13 +65,6 @@ export function Overview() {
               {"Watch a demonstration of the simulation used in the study."}
             </p>
           </div>
-          <a
-            href={"https://www.youtube.com/watch?v=Ekrv8yEYvl8"}
-            target={"_blank"}
-            rel={"noopener noreferrer"}
-          >
-            {"Watch on YouTube"}
-          </a>
         </div>
         <div className={"video-frame"}>
           <iframe
