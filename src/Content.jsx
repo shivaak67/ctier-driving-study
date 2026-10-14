@@ -79,8 +79,9 @@ export function Overview() {
           </p>
         </div>
         <div className="hero-video">
-          <Video id="Ekrv8yEYvl8" title="Driving simulation demonstration" />
-          <p className="muted">See the driving simulator used in the study.</p>
+          <p className="eyebrow">PROJECT OVERVIEW</p>
+          <Video id="C8hefs8Mqak" title="C-TIER project overview video" />
+          <p className="muted">Learn about the driving study.</p>
         </div>
       </div>
       <div className="container study-highlights">
@@ -102,6 +103,14 @@ export function Overview() {
           <p>Driving and sensor measurements support the research.</p>
         </article>
       </div>
+      <section
+        className="container simulation-demo"
+        aria-labelledby="demo-title"
+      >
+        <h2 id="demo-title">See the driving experience</h2>
+        <p>Watch the driving simulator used in the study.</p>
+        <Video id="Ekrv8yEYvl8" title="Driving simulation demonstration" />
+      </section>
       <section className="container road-intro">
         <div>
           <p className="eyebrow">MEMPHIS REGION</p>
@@ -116,11 +125,6 @@ export function Overview() {
         <details>
           <summary>Explore the 16 environmental conditions</summary>
           <Gallery />
-        </details>
-        <details>
-          <summary>About the research project</summary>
-          <p>Driver Responses to Roadside Warning Systems</p>
-          <Video id="C8hefs8Mqak" title="C-TIER project overview video" />
         </details>
       </div>
       <div className="container simple-contact">
