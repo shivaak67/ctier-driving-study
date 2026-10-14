@@ -4,7 +4,8 @@ import { motion, MotionConfig, useReducedMotion } from "framer-motion";
 import { Header, Footer, Overview, Equipment } from "./Content.jsx";
 import { Participants } from "./Participants.jsx";
 import { Results } from "./Results.jsx";
-const pages = ["overview", "equipment", "participants", "results"];
+import { RoadScenarios } from "./RoadScenarios.jsx";
+const pages = ["overview", "scenarios", "equipment", "participants", "results"];
 const getPage = () =>
   pages.includes(location.hash.slice(1)) ? location.hash.slice(1) : "overview";
 function App() {
@@ -47,7 +48,14 @@ function App() {
             }
             transition={{ duration: reduce ? 0 : 0.28 }}
           >
-            {[<Overview />, <Equipment />, <Participants />, <Results />][i]}
+            {page === id &&
+              [
+                <Overview />,
+                <RoadScenarios />,
+                <Equipment />,
+                <Participants />,
+                <Results />,
+              ][i]}
           </motion.div>
         ))}
       </main>

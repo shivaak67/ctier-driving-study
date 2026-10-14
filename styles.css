@@ -1546,3 +1546,402 @@ button:disabled {
   height: auto;
   margin: 20px auto;
 }
+
+/* Simpler study pages and the highway/scenario browser. */
+.section-block {
+  padding-block: 48px 64px;
+}
+.page-title,
+.simple-hero h1 {
+  letter-spacing: -1.2px;
+  line-height: 1.12;
+}
+.simple-hero {
+  gap: 48px;
+  padding-block: 56px 36px;
+}
+.simple-hero h1 {
+  max-width: 560px;
+  font-size: clamp(36px, 4.5vw, 58px);
+}
+.simple-hero .lead {
+  max-width: 500px;
+}
+.simple-hero .project-code {
+  margin-top: 28px;
+  font-size: 12px;
+}
+.hero-video > .muted {
+  font-size: 14px;
+  margin-top: 12px;
+}
+.study-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-block: 20px 48px;
+}
+.study-highlights article {
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.study-highlights h2 {
+  font-size: 21px;
+  line-height: 1.3;
+  margin: 15px 0 10px;
+}
+.study-highlights p,
+.research-purpose p,
+.preview-details p {
+  color: var(--muted);
+  line-height: 1.65;
+}
+.highlight-number {
+  color: var(--teal);
+  font-size: 13px;
+  font-weight: 700;
+}
+.road-intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: #f0f7f8;
+  border-radius: 12px;
+  padding: 30px;
+}
+.road-intro h2 {
+  font-size: 28px;
+  margin-block: 8px 12px;
+}
+.road-intro .button {
+  flex-shrink: 0;
+}
+.overview-details {
+  margin-block: 30px;
+}
+details > summary {
+  cursor: pointer;
+  font-weight: 700;
+  padding: 22px 0;
+  color: var(--navy);
+}
+.overview-details > details,
+.additional-equipment,
+.research-partners {
+  border-bottom: 1px solid var(--line);
+}
+.overview-details .environment-gallery {
+  width: 100%;
+  padding-top: 10px;
+}
+.overview-details .video-frame {
+  max-width: 800px;
+  margin-bottom: 24px;
+}
+.simple-contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding-block: 30px;
+  margin-block: 10px;
+}
+.study-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+  counter-reset: study-step;
+  padding: 0;
+  margin: 32px 0;
+  gap: 24px;
+}
+.study-steps li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+}
+.study-steps li::before {
+  counter-increment: study-step;
+  content: counter(study-step);
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  background: #eaf4f5;
+  color: var(--teal);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.simple-equipment {
+  grid-template-columns: repeat(3, 1fr);
+}
+.equipment-card {
+  border-radius: 12px;
+  overflow: hidden;
+}
+.equipment-card h2 {
+  font-size: 23px;
+}
+.equipment-photo {
+  height: 220px;
+}
+.instrument-model {
+  color: var(--muted);
+  font-size: 14px;
+}
+.equipment-card .card-body p {
+  min-height: 0;
+  margin-block: 12px;
+  font-size: 16px;
+}
+.equipment-card .card-body a {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 14px;
+}
+.additional-equipment {
+  margin-top: 24px;
+}
+.additional-equipment .equipment-grid {
+  padding-bottom: 24px;
+}
+.registration-layout.study-registration {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  gap: 0;
+}
+.registration-intro,
+.registration-qr {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+.registration-qr {
+  background: #f7fafb;
+}
+.research-purpose {
+  background: #eef8f8;
+  border-radius: 12px;
+  padding: 28px;
+  margin-block: 32px;
+}
+.research-purpose h2 {
+  margin-top: 0;
+}
+.research-purpose ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 40px;
+  padding-left: 20px;
+  color: var(--teal);
+}
+.investigator-card {
+  border-radius: 12px;
+}
+.scenario-picker {
+  border: 0;
+  padding: 0;
+  margin: 30px 0 0;
+  min-width: 0;
+}
+.scenario-picker legend {
+  font-weight: 700;
+  font-size: 20px;
+  padding: 0;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.step-number {
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--teal);
+  color: white;
+}
+.highway-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.choice-card {
+  border: 1px solid #cddbe5;
+  background: white;
+  border-radius: 10px;
+  padding: 20px 16px;
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+.choice-card:hover {
+  background: #f1f7fb;
+}
+.choice-card[aria-pressed="true"] {
+  border-color: var(--blue);
+  box-shadow: inset 0 0 0 1px var(--blue);
+  background: #eaf2ff;
+}
+.choice-card > span:last-child {
+  font-size: 13px;
+}
+.highway-shield {
+  font-size: 24px;
+  font-weight: 700;
+}
+.roadway-choice {
+  flex-direction: row;
+  padding: 14px;
+}
+.roadway-choice svg {
+  flex-shrink: 0;
+}
+.scenario-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2.6fr) minmax(240px, 1fr);
+  gap: 24px;
+  margin-top: 30px;
+}
+.recording-placeholder {
+  aspect-ratio: 16 / 9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+  background: #f0f5fa;
+  border: 1px solid #d5e1ee;
+  border-radius: 12px;
+  color: var(--navy);
+}
+.recording-placeholder > svg {
+  width: 72px;
+  height: 60px;
+  color: var(--teal);
+  margin-bottom: 20px;
+}
+.recording-placeholder h2 {
+  margin: 12px 0;
+  font-size: 28px;
+}
+.recording-placeholder p {
+  color: var(--muted);
+  max-width: 340px;
+  margin: 0;
+  line-height: 1.6;
+}
+.selected-scenario {
+  font-size: 27px;
+  margin: 22px 0 8px;
+}
+.preview-details {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  align-self: start;
+}
+.preview-details h2 {
+  font-size: 20px;
+  margin-top: 0;
+}
+.preview-details dt {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 20px;
+}
+.preview-details dd {
+  margin: 6px 0 0;
+  font-weight: 700;
+}
+.preview-details p,
+.preview-details a {
+  font-size: 14px;
+}
+.header-inner nav {
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media (max-width: 1050px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .header-inner nav {
+    justify-content: center;
+    min-height: 56px;
+  }
+  .scenario-layout {
+    grid-template-columns: minmax(0, 1fr) 260px;
+  }
+  .simple-equipment {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .roadway-choice {
+    flex-direction: column;
+  }
+}
+@media (max-width: 760px) {
+  .container {
+    width: calc(100% - 32px);
+  }
+  .section-block {
+    padding-block: 30px 40px;
+  }
+  .simple-hero {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-block: 32px;
+  }
+  .study-highlights,
+  .simple-equipment,
+  .study-steps,
+  .scenario-layout {
+    grid-template-columns: 1fr;
+  }
+  .highway-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .roadway-choice {
+    flex-direction: row;
+    padding: 12px;
+  }
+  .roadway-choice strong {
+    font-size: 14px;
+  }
+  .road-intro,
+  .simple-contact {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .simple-hero h1,
+  .page-title {
+    font-size: 36px;
+  }
+  .header-inner nav {
+    gap: 8px 18px;
+    padding-bottom: 8px;
+  }
+  .header-inner nav a {
+    font-size: 13px;
+    min-height: 36px;
+  }
+  .recording-placeholder {
+    aspect-ratio: auto;
+    min-height: 260px;
+  }
+  .scenario-picker legend {
+    font-size: 18px;
+  }
+}

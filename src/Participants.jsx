@@ -14,12 +14,14 @@ export function Participants() {
       <div className="container section-block">
         <p className="eyebrow">JOIN THE STUDY</p>
         <h1 className="page-title" id="participants-title">
-          Participant registration.
+          Join the driving study
         </h1>
-        <p className="lead">Help us understand the driving experience.</p>
+        <p className="lead">
+          Help us understand how people respond to roadway warnings.
+        </p>
         <div className="registration-layout study-registration">
           <div className="form-card registration-intro">
-            <h2>Register for a driving session</h2>
+            <h2>Register for a session</h2>
             <p>
               Complete our short registration form with your contact details and
               preferred experiment date and time.
@@ -34,7 +36,7 @@ export function Participants() {
               rel="noopener noreferrer"
               whileTap={{ scale: 0.97 }}
             >
-              Register for the study
+              Open registration form
             </motion.a>
             <p className="muted">
               Opens Google Forms. The research team will email you to confirm
@@ -66,6 +68,14 @@ export function Participants() {
             <p className="muted">Use your phone’s camera to open the form.</p>
           </aside>
         </div>
+        <ol className="study-steps">
+          <li>Register</li>
+          <li>Receive confirmation</li>
+          <li>Attend your session</li>
+        </ol>
+        <p className="simple-contact">
+          <a href="#results">Questions? Contact the study team →</a>
+        </p>
       </div>
     </section>
   );

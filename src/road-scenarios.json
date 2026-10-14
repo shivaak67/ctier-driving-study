@@ -1,0 +1,31 @@
+{
+  "highways": [
+    { "id": "i240", "label": "I-240" },
+    { "id": "i40", "label": "I-40" },
+    { "id": "i55", "label": "I-55" },
+    { "id": "sr385", "label": "SR 385" }
+  ],
+  "scenarios": [
+    {
+      "id": "straight",
+      "label": "Straight roadway",
+      "description": "A straight highway section with a stopped-vehicle encounter."
+    },
+    {
+      "id": "horizontal",
+      "label": "Curve",
+      "description": "A curved roadway section with a stopped-vehicle encounter."
+    },
+    {
+      "id": "weaving",
+      "label": "Weaving section",
+      "description": "A roadway section where entering and exiting traffic share space."
+    },
+    {
+      "id": "entrance",
+      "label": "Ramp merge",
+      "description": "An entrance-ramp section approaching the main highway."
+    }
+  ],
+  "recordings": []
+}

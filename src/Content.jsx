@@ -1,261 +1,190 @@
-import { Partners } from "./Partners.jsx";
 import React from "react";
 import { motion } from "framer-motion";
-import { Reveal } from "./motion.jsx";
 import { Gallery } from "./Gallery.jsx";
+const instruments = [
+  [
+    "Steering wheel & pedals",
+    "Logitech G923",
+    "g923.png",
+    "Control steering, acceleration and braking.",
+    "https://www.logitechg.com/en-us/shop/p/g923-trueforce-sim-racing-wheel",
+  ],
+  [
+    "VR headset",
+    "VIVE Focus 3",
+    "vive.png",
+    "See the simulated road in virtual reality.",
+    "https://www.vive.com/us/product/vive-focus3/specs/",
+  ],
+  [
+    "Skin conductance sensor",
+    "Shimmer3 GSR+",
+    "shimmer.jpg",
+    "Measure changes in skin conductance during the drive.",
+    "https://www.shimmersensing.com/product/shimmer3-gsr-unit/",
+  ],
+  [
+    "Eye tracker",
+    "VIVE Focus 3 Eye Tracker",
+    "vive-eye-tracker.webp",
+    "Measure where the driver looks during VR.",
+    "https://business.vive.com/us/product/vive-focus-3-eye-tracker/",
+  ],
+  [
+    "Facial tracker",
+    "VIVE Focus 3 Facial Tracker",
+    "vive-facial-tracker.png",
+    "Record facial movement during VR.",
+    "https://developer.vive.com/us/hardware/focus-3-facial-tracker/",
+  ],
+];
+function Video({ id, title }) {
+  return (
+    <div className="video-frame">
+      <iframe
+        src={`https://www.youtube-nocookie.com/embed/${id}`}
+        title={title}
+        loading="lazy"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+      />
+    </div>
+  );
+}
 export function Overview() {
   return (
     <section
-      id={"overview"}
-      className={"page active"}
-      aria-labelledby={"overview-title"}
+      id="overview"
+      className="page active"
+      aria-labelledby="overview-title"
     >
-      <div className={"container hero"}>
-        <div className={"hero-copy"}>
-          <p className={"eyebrow"}>
-            {"HUMAN FACTORS \u00b7 DRIVING SIMULATION"}
+      <div className="container hero simple-hero">
+        <div className="hero-copy">
+          <p className="eyebrow">C-TIER DRIVING STUDY</p>
+          <h1 id="overview-title">Driving safety research</h1>
+          <p className="lead">
+            How do drivers respond to stopped trucks and warning systems?
           </p>
-          <h1 id={"overview-title"}>
-            Driver Responses to Roadside Warning Systems
-          </h1>
+          <div className="actions">
+            <a className="button primary" href="#participants">
+              Join the study
+            </a>
+            <a className="text-link" href="#scenarios">
+              Explore the roads →
+            </a>
+          </div>
           <p className="project-code">
             <strong>IRB Approval No: PRO-FY2026-481</strong>
           </p>
-          <p className={"lead"}>
-            {
-              "\n              A controlled environment to explore how drivers respond to stopped\n              trucks, roadway conditions, and warning systems.\n            "
-            }
-          </p>
-          <div className={"actions"}>
-            <a className={"button primary"} href={"#participants"}>
-              {"Register a participant "}
-            </a>
-            <a className={"text-link"} href={"#results"}>
-              {"Research & contacts \u2192"}
-            </a>
-          </div>
-          <div className={"hero-notes"}>
-            <span>{"Unity simulation"}</span>
-            <span>{"Vehicle telemetry"}</span>
-            <span>{"Skin conductance"}</span>
-          </div>
         </div>
         <div className="hero-video">
-          <p className="eyebrow">PROJECT OVERVIEW</p>
-          <div className="video-frame">
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/C8hefs8Mqak"
-              title="C-TIER project overview video"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            />
-          </div>
+          <Video id="Ekrv8yEYvl8" title="Driving simulation demonstration" />
+          <p className="muted">See the driving simulator used in the study.</p>
         </div>
       </div>
-      <div
-        className={"container simulation-demo"}
-        aria-labelledby={"demo-title"}
-      >
-        <p className={"eyebrow"}>{"SIMULATION DEMO"}</p>
-        <div className={"section-heading"}>
-          <div>
-            <h2 id={"demo-title"}>{"See the driving experience."}</h2>
-            <p>
-              {"Watch a demonstration of the simulation used in the study."}
-            </p>
-          </div>
-        </div>
-        <div className={"video-frame"}>
-          <iframe
-            src={"https://www.youtube-nocookie.com/embed/Ekrv8yEYvl8"}
-            title={"Driving simulation demonstration"}
-            loading={"lazy"}
-            referrerPolicy={"strict-origin-when-cross-origin"}
-            allow={
-              "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            }
-            allowFullScreen
-          ></iframe>
-        </div>
+      <div className="container study-highlights">
+        <article>
+          <span className="highlight-number">01</span>
+          <h2>Drive in a simulator</h2>
+          <p>Use a steering wheel and pedals to travel a simulated highway.</p>
+        </article>
+        <article>
+          <span className="highlight-number">02</span>
+          <h2>Experience roadway conditions</h2>
+          <p>
+            Explore how lighting, weather and warning systems change the drive.
+          </p>
+        </article>
+        <article>
+          <span className="highlight-number">03</span>
+          <h2>Help us understand driver responses</h2>
+          <p>Driving and sensor measurements support the research.</p>
+        </article>
       </div>
-      <Gallery />
-      <section
-        className="container overview-contacts"
-        aria-labelledby="overview-contacts-title"
-      >
-        <h2 id="overview-contacts-title">Study contacts &amp; collaboration</h2>
-        <div className="investigator-grid">
-          <article className="investigator-card">
-            <p className="eyebrow">Principal Investigator</p>
-            <h3>Dr. Sabyasachee Mishra</h3>
-            <a href="mailto:smishra3@memphis.edu">smishra3@memphis.edu</a>
-          </article>
-          <article className="investigator-card">
-            <p className="eyebrow">Investigator</p>
-            <h3>Md Tawkir Ahmed</h3>
-            <a href="mailto:mahmed8@memphis.edu">mahmed8@memphis.edu</a>
-          </article>
+      <section className="container road-intro">
+        <div>
+          <p className="eyebrow">MEMPHIS REGION</p>
+          <h2>Four highways. One place to explore.</h2>
+          <p>I-240 · I-40 · I-55 · SR 385</p>
         </div>
-        <Partners compact />
+        <a className="button primary" href="#scenarios">
+          View road scenarios →
+        </a>
       </section>
+      <div className="container overview-details">
+        <details>
+          <summary>Explore the 16 environmental conditions</summary>
+          <Gallery />
+        </details>
+        <details>
+          <summary>About the research project</summary>
+          <p>Driver Responses to Roadside Warning Systems</p>
+          <Video id="C8hefs8Mqak" title="C-TIER project overview video" />
+        </details>
+      </div>
+      <div className="container simple-contact">
+        <p>Questions about the study?</p>
+        <a href="#results">Contact the research team →</a>
+      </div>
     </section>
+  );
+}
+function Instrument({ item }) {
+  return (
+    <article className="equipment-card">
+      <div className="equipment-photo">
+        <img src={`assets/${item[2]}`} alt={item[1]} loading="lazy" />
+      </div>
+      <div className="card-body">
+        <h2>{item[0]}</h2>
+        <p className="instrument-model">{item[1]}</p>
+        <p>{item[3]}</p>
+        <a href={item[4]} target="_blank" rel="noopener noreferrer">
+          Manufacturer details ↗
+        </a>
+      </div>
+    </article>
   );
 }
 export function Equipment() {
   return (
     <section
-      id={"equipment"}
-      className={"page active"}
-      aria-labelledby={"equipment-title"}
+      id="equipment"
+      className="page active"
+      aria-labelledby="equipment-title"
     >
-      <div className={"container section-block"}>
-        <p className={"eyebrow"}>{"EXPERIMENT INSTRUMENTS"}</p>
-        <h1 className={"page-title"} id={"equipment-title"}>
-          {"\n            Inside the research setup.\n          "}
+      <div className="container section-block">
+        <h1 className="page-title" id="equipment-title">
+          The driving setup
         </h1>
-        <p className={"lead narrow"}>
-          {
-            "\n            Each instrument captures a different part of the driving experience.\n          "
-          }
+        <p className="lead">
+          Each tool helps us understand a different part of the driving
+          experience.
         </p>
-        <div className={"equipment-grid"}>
-          <Reveal className={"equipment-card"} as="article">
-            <div className={"equipment-photo"}>
-              <img
-                src={"assets/g923.png"}
-                alt={"Logitech G923 steering wheel"}
-                loading={"lazy"}
-              />
-            </div>
-            <div className={"card-body"}>
-              <span className={"small-index"}>{"DRIVER INPUT"}</span>
-              <h2>{"Logitech G923"}</h2>
-              <p>
-                {
-                  "\n                  Steering wheel and pedals provide the driving controls. Unity\n                  logs steering, throttle, and braking during the route.\n                "
-                }
-              </p>
-              <a
-                href={
-                  "https://www.logitechg.com/en-us/shop/p/g923-trueforce-sim-racing-wheel"
-                }
-                target={"_blank"}
-                rel={"noopener noreferrer"}
-              >
-                {"Manufacturer details"}
-              </a>
-            </div>
-          </Reveal>
-          <Reveal className={"equipment-card"} as="article">
-            <div className={"equipment-photo"}>
-              <img
-                src={"assets/vive.png"}
-                alt={"VIVE Focus 3 virtual reality headset"}
-                loading={"lazy"}
-              />
-            </div>
-            <div className={"card-body"}>
-              <span className={"small-index"}>{"IMMERSIVE DISPLAY"}</span>
-              <h2>{"VIVE Focus 3"}</h2>
-              <p>
-                {
-                  "\n                  The headset provides an immersive view of the simulation when\n                  the VR configuration is used.\n                "
-                }
-              </p>
-              <a
-                href={"https://www.vive.com/us/product/vive-focus3/specs/"}
-                target={"_blank"}
-                rel={"noopener noreferrer"}
-              >
-                {"Manufacturer details"}
-              </a>
-            </div>
-          </Reveal>
-          <Reveal className={"equipment-card"} as="article">
-            <div className={"equipment-photo"}>
-              <img
-                src={"assets/shimmer.jpg"}
-                alt={"Shimmer3 GSR+ official product photograph"}
-                loading={"lazy"}
-              />
-            </div>
-            <div className={"card-body"}>
-              <span className={"small-index"}>
-                {"PHYSIOLOGICAL MEASUREMENT"}
-              </span>
-              <h2>{"Shimmer3 GSR+"}</h2>
-              <p>
-                {
-                  "\n                  Finger electrodes measure skin conductance. iMotions records\n                  the sensor stream and incoming simulation markers.\n                "
-                }
-              </p>
-              <a
-                href={
-                  "https://www.shimmersensing.com/product/shimmer3-gsr-unit/"
-                }
-                target={"_blank"}
-                rel={"noopener noreferrer"}
-              >
-                {"Manufacturer image & details"}
-              </a>
-            </div>
-          </Reveal>
-          <Reveal className={"equipment-card"} as="article">
-            <div className={"equipment-photo"}>
-              <img
-                src={"assets/vive-eye-tracker.webp"}
-                alt={"VIVE Focus 3 Eye Tracker attachment"}
-                loading={"lazy"}
-              />
-            </div>
-            <div className={"card-body"}>
-              <span className={"small-index"}>{"EYE MOVEMENT"}</span>
-              <h2>{"VIVE Focus 3 Eye Tracker"}</h2>
-              <p>
-                {
-                  "\n                  The headset attachment measures gaze direction, pupil size,\n                  and eye openness, supporting analysis of where a driver looks\n                  during a VR scenario.\n                "
-                }
-              </p>
-              <a
-                href={
-                  "https://business.vive.com/us/product/vive-focus-3-eye-tracker/"
-                }
-                target={"_blank"}
-                rel={"noopener noreferrer"}
-              >
-                {"Manufacturer details"}
-              </a>
-            </div>
-          </Reveal>
-          <Reveal className={"equipment-card"} as="article">
-            <div className={"equipment-photo"}>
-              <img
-                src={"assets/vive-facial-tracker.png"}
-                alt={"VIVE Focus series facial tracker compatible with Focus 3"}
-                loading={"lazy"}
-              />
-            </div>
-            <div className={"card-body"}>
-              <span className={"small-index"}>{"FACIAL MOVEMENT"}</span>
-              <h2>{"VIVE Focus 3 Facial Tracker"}</h2>
-              <p>
-                {
-                  "\n                  The facial-tracking accessory captures movements of the lips,\n                  jaw, cheeks, and lower face during the immersive driving\n                  experience.\n                "
-                }
-              </p>
-              <a
-                href={
-                  "https://developer.vive.com/us/hardware/focus-3-facial-tracker/"
-                }
-                target={"_blank"}
-                rel={"noopener noreferrer"}
-              >
-                {"Manufacturer details"}
-              </a>
-            </div>
-          </Reveal>
+        <ol className="study-steps">
+          <li>Drive</li>
+          <li>Experience</li>
+          <li>Measure</li>
+        </ol>
+        <div className="equipment-grid simple-equipment">
+          {instruments.slice(0, 3).map((item) => (
+            <Instrument key={item[1]} item={item} />
+          ))}
         </div>
+        <details className="additional-equipment">
+          <summary>Additional tracking equipment</summary>
+          <div className="equipment-grid">
+            {instruments.slice(3).map((item) => (
+              <Instrument key={item[1]} item={item} />
+            ))}
+          </div>
+        </details>
+        <p className="simple-contact">
+          <a href="#results">
+            Questions about the equipment? Contact the team →
+          </a>
+        </p>
       </div>
     </section>
   );
@@ -311,9 +240,13 @@ export function Header({ page, pages }) {
                 href={"#" + p}
                 aria-current={page === p ? "page" : undefined}
               >
-                {p === "results"
-                  ? "Research & Contacts"
-                  : p[0].toUpperCase() + p.slice(1)}
+                {p === "scenarios"
+                  ? "Road Scenarios"
+                  : p === "participants"
+                    ? "Participate"
+                    : p === "results"
+                      ? "Research & Contacts"
+                      : p[0].toUpperCase() + p.slice(1)}
                 {page === p && (
                   <motion.span
                     className="nav-indicator"
