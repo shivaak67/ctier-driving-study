@@ -1795,9 +1795,38 @@ details > summary {
 .choice-card > span:last-child {
   font-size: 13px;
 }
-.highway-shield {
-  font-size: 24px;
-  font-weight: 700;
+.highway-choice {
+  flex-direction: row;
+  gap: 20px;
+  padding: 12px 16px;
+  min-height: 110px;
+}
+.route-motif {
+  width: 85px;
+  height: 62px;
+  flex-shrink: 0;
+  color: #174779;
+}
+.highway-identity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.highway-identity > span {
+  font-size: 13px;
+  white-space: nowrap;
+}
+.highway-sign {
+  width: 50px;
+  height: 56px;
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.road-type-icon {
+  width: 52px;
+  height: 42px;
+  color: #3b607f;
 }
 .roadway-choice {
   flex-direction: row;
@@ -1912,6 +1941,17 @@ details > summary {
   .highway-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+  }
+  .highway-choice {
+    gap: 9px;
+    padding: 12px 8px;
+  }
+  .route-motif {
+    width: 50px;
+    height: 45px;
+  }
+  .highway-identity > span {
+    font-size: 11px;
   }
   .roadway-choice {
     flex-direction: row;
