@@ -193,10 +193,16 @@ function RouteMotif({ highwayId }) {
 export function RoadScenarios() {
   const [highwayId, setHighwayId] = useState("i240");
   const [scenarioId, setScenarioId] = useState("straight");
+  const [roadTypeId, setRoadTypeId] = useState("straight");
   const highway = catalog.highways.find((item) => item.id === highwayId);
   const scenario = catalog.scenarios.find((item) => item.id === scenarioId);
+  const roadTypes = catalog.roadTypes.filter(
+    (item) => item.category === scenarioId,
+  );
+  const roadType =
+    roadTypes.find((item) => item.id === roadTypeId) || roadTypes[0];
   const recording = catalog.recordings.find(
-    (item) => item.highway === highwayId && item.scenario === scenarioId,
+    (item) => item.highway === highwayId && item.roadType === roadType.id,
   );
   return (
     <section
@@ -210,6 +216,10 @@ export function RoadScenarios() {
         </h1>
         <p className="lead">
           Choose a highway and roadway type to explore the driving study.
+        </p>
+        <p className="fine-print">
+          Nine road types are available for each highway. Curves and ramps
+          include a road-type selector.
         </p>
         <fieldset className="scenario-picker">
           <legend>
@@ -245,7 +255,13 @@ export function RoadScenarios() {
                 key={item.id}
                 className="choice-card roadway-choice"
                 aria-pressed={scenarioId === item.id}
-                onClick={() => setScenarioId(item.id)}
+                onClick={() => {
+                  setScenarioId(item.id);
+                  setRoadTypeId(
+                    catalog.roadTypes.find((type) => type.category === item.id)
+                      .id,
+                  );
+                }}
               >
                 <RoadIcon shape={item.id} />
                 <strong>{item.label}</strong>
@@ -253,25 +269,59 @@ export function RoadScenarios() {
             ))}
           </div>
         </fieldset>
+        {roadTypes.length > 1 && (
+          <fieldset className="scenario-picker">
+            <legend>
+              <span className="step-number">3</span> Choose a road type
+            </legend>
+            <div className="road-variant-grid">
+              {roadTypes.map((item) => (
+                <button
+                  type="button"
+                  key={item.id}
+                  className="choice-card roadway-variant"
+                  aria-pressed={roadType.id === item.id}
+                  onClick={() => setRoadTypeId(item.id)}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
+          </fieldset>
+        )}
         <div className="scenario-layout">
           <div aria-live="polite" aria-atomic="true">
             {recording ? (
               <div className="video-frame">
-                <iframe
-                  key={recording.embedUrl}
-                  src={recording.embedUrl}
-                  title={`${highway.label}: ${scenario.label}`}
-                  loading="lazy"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allow="encrypted-media; picture-in-picture"
-                  allowFullScreen
-                />
+                {recording.src ? (
+                  <video
+                    key={recording.src}
+                    src={recording.src}
+                    aria-label={`${highway.label}: ${roadType.label} — scripted route preview`}
+                    controls
+                    playsInline
+                    preload="metadata"
+                  >
+                    Your browser does not support this video.{" "}
+                    <a href={recording.src}>Download the preview</a>.
+                  </video>
+                ) : (
+                  <iframe
+                    key={recording.embedUrl}
+                    src={recording.embedUrl}
+                    title={`${highway.label}: ${roadType.label}`}
+                    loading="lazy"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allow="encrypted-media; picture-in-picture"
+                    allowFullScreen
+                  />
+                )}
               </div>
             ) : (
               <div className="recording-placeholder">
                 <RoadIcon shape={scenario.id} />
                 <span className="small-index">
-                  {highway.label} · {scenario.label}
+                  {highway.label} · {roadType.label}
                 </span>
                 <h2>Video coming soon</h2>
                 <p>
@@ -280,9 +330,10 @@ export function RoadScenarios() {
               </div>
             )}
             <h2 className="selected-scenario">
-              {highway.label} — {scenario.label}
+              {highway.label} — {roadType.label}
             </h2>
             <p>{scenario.description}</p>
+            {recording?.description && <p>{recording.description}</p>}
           </div>
           <aside className="preview-details" aria-labelledby="preview-title">
             <h2 id="preview-title">About this preview</h2>
@@ -291,6 +342,8 @@ export function RoadScenarios() {
               <dd>{highway.label}</dd>
               <dt>Roadway</dt>
               <dd>{scenario.label}</dd>
+              <dt>Road type</dt>
+              <dd>{roadType.label}</dd>
               <dt>Recording</dt>
               <dd>{recording ? recording.drivingMode : "Not uploaded yet"}</dd>
             </dl>

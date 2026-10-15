@@ -12,6 +12,7 @@ const types = {
   ".webp": "image/webp",
   ".svg": "image/svg+xml",
   ".jpg": "image/jpeg",
+  ".mp4": "video/mp4",
 };
 const allowed = new Set([
   "index.html",
@@ -43,12 +44,49 @@ export function createStudyServer() {
       );
       const meta = await stat(file);
       if (!meta.isFile()) throw new Error("Not a file");
-      res.writeHead(200, {
+      const headers = {
         "Content-Type": types[path.extname(file)] || "application/octet-stream",
         "Cache-Control": "no-store",
         "X-Content-Type-Options": "nosniff",
         "Referrer-Policy": "no-referrer",
-      });
+        "Content-Length": meta.size,
+      };
+      if (path.extname(file) === ".mp4") {
+        headers["Accept-Ranges"] = "bytes";
+        if (req.headers.range) {
+          const match = /^bytes=(\d*)-(\d*)$/.exec(req.headers.range);
+          let start = match?.[1] ? Number(match[1]) : 0;
+          let end = match?.[2] ? Number(match[2]) : meta.size - 1;
+          if (match && !match[1] && match[2]) {
+            start = Math.max(0, meta.size - end);
+            end = meta.size - 1;
+          }
+          end = Math.min(end, meta.size - 1);
+          if (
+            !match ||
+            (!match[1] && !match[2]) ||
+            start > end ||
+            start >= meta.size
+          ) {
+            res
+              .writeHead(416, { "Content-Range": `bytes */${meta.size}` })
+              .end();
+            return;
+          }
+          res.writeHead(206, {
+            ...headers,
+            "Content-Length": end - start + 1,
+            "Content-Range": `bytes ${start}-${end}/${meta.size}`,
+          });
+          const bytes =
+            req.method === "HEAD"
+              ? undefined
+              : (await readFile(file)).subarray(start, end + 1);
+          res.end(bytes);
+          return;
+        }
+      }
+      res.writeHead(200, headers);
       res.end(req.method === "HEAD" ? undefined : await readFile(file));
     } catch {
       res.writeHead(404).end("Not found");
