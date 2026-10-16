@@ -84,6 +84,70 @@ export function Overview() {
           <p className="muted">Learn about the driving study.</p>
         </div>
       </div>
+      <section
+        className="container simulation-demo research-demo"
+        aria-labelledby="research-demo-title"
+      >
+        <div className="research-demo-heading">
+          <div>
+            <p className="eyebrow">WATCH THE RESEARCH DEMO · 2 MIN 20 SEC</p>
+            <h2 id="research-demo-title">
+              V2X warnings in the driving simulator
+            </h2>
+            <p>
+              Explore the SUMO–Unity research framework, simulated hazard
+              warnings and a recorded stopped-truck encounter.
+            </p>
+          </div>
+          <a
+            href="assets/v2x-research-demo.mp4"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open the full video ↗
+          </a>
+        </div>
+        <div className="video-frame">
+          <video
+            src="assets/v2x-research-demo.mp4"
+            poster="assets/v2x-research-demo-poster.jpg"
+            aria-label="V2X research demonstration: framework diagrams, hazard examples and recorded simulator footage"
+            controls
+            playsInline
+            preload="none"
+          >
+            Your browser does not support this video.{" "}
+            <a href="assets/v2x-research-demo.mp4">Open the research demo</a>.
+          </video>
+        </div>
+        <p className="fine-print research-demo-note">
+          Includes illustrative diagrams, proposed research extensions and
+          recorded simulator footage. Demonstration, not autonomous-driving
+          validation.
+        </p>
+        <details className="video-credits">
+          <summary>Music credit</summary>
+          <p>
+            “Dream Culture” by Kevin MacLeod ({" "}
+            <a
+              href="https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1300046"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              incompetech.com
+            </a>
+            ), licensed under{" "}
+            <a
+              href="https://creativecommons.org/licenses/by/4.0/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Creative Commons Attribution 4.0
+            </a>
+            . Edited to 140 seconds, with volume adjustments and fades.
+          </p>
+        </details>
+      </section>
       <div className="container study-highlights">
         <article>
           <span className="highlight-number">01</span>
