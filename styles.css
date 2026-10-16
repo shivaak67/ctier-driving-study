@@ -711,6 +711,54 @@ textarea {
   align-items: center;
   gap: 40px;
 }
+.real-world-cameras {
+  margin-top: 32px;
+  padding: clamp(20px, 3vw, 32px);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--teal);
+  border-radius: 8px;
+  background: var(--paper);
+}
+.camera-source-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.camera-source-heading > div:first-child {
+  flex: 1 1 380px;
+}
+.camera-source-heading h2 {
+  margin: 8px 0 12px;
+}
+.camera-source-heading p {
+  max-width: 670px;
+  line-height: 1.6;
+}
+.camera-source-actions {
+  display: grid;
+  justify-items: start;
+  gap: 14px;
+}
+.camera-source-actions a {
+  font-size: 14px;
+}
+.camera-source-note {
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+#smartway-camera-viewer iframe {
+  display: block;
+  width: 100%;
+  height: clamp(500px, 75vh, 850px);
+  margin-top: 24px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: white;
+}
 .dashboard-placeholder img {
   width: 100%;
   height: 270px;

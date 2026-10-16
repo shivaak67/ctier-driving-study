@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import catalog from "./road-scenarios.json";
+import { SmartWayCameras } from "./SmartWayCameras.jsx";
 
 function RoadIcon({ shape = "straight" }) {
   return (
@@ -358,6 +359,7 @@ export function RoadScenarios() {
           These are simulation maps of Memphis-region highways. Recordings are
           demonstrations, not autonomous-driving validation.
         </p>
+        <SmartWayCameras />
       </div>
     </section>
   );
