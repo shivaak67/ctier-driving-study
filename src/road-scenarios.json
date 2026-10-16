@@ -44,7 +44,7 @@
       "highway": "i40",
       "scenario": "straight",
       "roadType": "straight",
-      "src": "assets/i40-straight-scripted.mp4?v=20261016-repaired",
+      "src": "assets/i40-straight-scripted.mp4?v=20261016-distinct-stable",
       "drivingMode": "Scripted route preview, light traffic, steady 25 mph",
       "description": "Straight roadway: a continuous lane-centre preview with smooth visual steering and light traffic kept clear of the demo car. Demonstration only; not autonomous-driving validation."
     },
@@ -52,7 +52,7 @@
       "highway": "i40",
       "scenario": "horizontal",
       "roadType": "horizontal",
-      "src": "assets/i40-horizontal-scripted.mp4?v=20261016-repaired",
+      "src": "assets/i40-horizontal-scripted.mp4?v=20261016-distinct-stable",
       "drivingMode": "Scripted route preview, light traffic, steady 25 mph",
       "description": "Horizontal curve: a continuous lane-centre preview with smooth visual steering and light traffic kept clear of the demo car. Demonstration only; not autonomous-driving validation."
     },
@@ -60,7 +60,7 @@
       "highway": "i40",
       "scenario": "horizontal",
       "roadType": "vertical",
-      "src": "assets/i40-vertical-scripted.mp4?v=20261016-repaired",
+      "src": "assets/i40-vertical-scripted.mp4?v=20261016-distinct-stable",
       "drivingMode": "Scripted route preview, light traffic, steady 25 mph",
       "description": "Vertical curve: a continuous lane-centre preview with smooth visual steering and light traffic kept clear of the demo car. Demonstration only; not autonomous-driving validation."
     },
@@ -68,7 +68,7 @@
       "highway": "i40",
       "scenario": "horizontal",
       "roadType": "combined",
-      "src": "assets/i40-combined-scripted.mp4?v=20261016-repaired",
+      "src": "assets/i40-combined-scripted.mp4?v=20261016-distinct-stable",
       "drivingMode": "Scripted route preview, light traffic, steady 25 mph",
       "description": "Combined curves: a continuous lane-centre preview with smooth visual steering and light traffic kept clear of the demo car. Demonstration only; not autonomous-driving validation."
     },
@@ -76,7 +76,7 @@
       "highway": "i40",
       "scenario": "weaving",
       "roadType": "weaving",
-      "src": "assets/i40-weaving-scripted.mp4?v=20261016-repaired",
+      "src": "assets/i40-weaving-scripted.mp4?v=20261016-distinct-stable",
       "drivingMode": "Scripted route preview, light traffic, steady 25 mph",
       "description": "Weaving area: a continuous lane-centre preview with smooth visual steering and light traffic kept clear of the demo car. Demonstration only; not autonomous-driving validation."
     },
@@ -84,7 +84,7 @@
       "highway": "i40",
       "scenario": "entrance",
       "roadType": "entrance",
-      "src": "assets/i40-entrance-scripted.mp4?v=20261016-repaired",
+      "src": "assets/i40-entrance-scripted.mp4?v=20261016-distinct-stable",
       "drivingMode": "Scripted route preview, light traffic, steady 25 mph",
       "description": "Entrance ramp: a continuous lane-centre preview with smooth visual steering and light traffic kept clear of the demo car. Demonstration only; not autonomous-driving validation."
     },
@@ -92,7 +92,7 @@
       "highway": "i40",
       "scenario": "entrance",
       "roadType": "exit",
-      "src": "assets/i40-exit-scripted.mp4?v=20261016-repaired",
+      "src": "assets/i40-exit-scripted.mp4?v=20261016-distinct-stable",
       "drivingMode": "Scripted route preview, light traffic, steady 25 mph",
       "description": "Exit ramp: a continuous lane-centre preview with smooth visual steering and light traffic kept clear of the demo car. Demonstration only; not autonomous-driving validation."
     },
@@ -100,7 +100,7 @@
       "highway": "i40",
       "scenario": "entrance",
       "roadType": "gore",
-      "src": "assets/i40-gore-scripted.mp4?v=20261016-repaired",
+      "src": "assets/i40-gore-scripted.mp4?v=20261016-distinct-stable",
       "drivingMode": "Scripted route preview, light traffic, steady 25 mph",
       "description": "Gore area: a continuous lane-centre preview with smooth visual steering and light traffic kept clear of the demo car. Demonstration only; not autonomous-driving validation."
     },
@@ -108,7 +108,7 @@
       "highway": "i40",
       "scenario": "entrance",
       "roadType": "curved_ramp",
-      "src": "assets/i40-curved_ramp-scripted.mp4?v=20261016-repaired",
+      "src": "assets/i40-curved_ramp-scripted.mp4?v=20261016-distinct-stable",
       "drivingMode": "Scripted route preview, light traffic, steady 25 mph",
       "description": "Curved ramp: a continuous lane-centre preview with smooth visual steering and light traffic kept clear of the demo car. Demonstration only; not autonomous-driving validation."
     },
@@ -212,7 +212,7 @@
       "highway": "i55",
       "scenario": "horizontal",
       "roadType": "combined",
-      "src": "assets/i55-combined-scripted.mp4?v=20261016-repaired",
+      "src": "assets/i55-combined-scripted.mp4?v=20261016-distinct-stable",
       "drivingMode": "Scripted route preview, light traffic, steady 25 mph",
       "description": "Combined curves: a continuous lane-centre preview with smooth visual steering and light traffic kept clear of the demo car. Demonstration only; not autonomous-driving validation."
     },
@@ -220,7 +220,7 @@
       "highway": "i55",
       "scenario": "weaving",
       "roadType": "weaving",
-      "src": "assets/i55-weaving-scripted.mp4?v=20261016-repaired",
+      "src": "assets/i55-weaving-scripted.mp4?v=20261016-distinct-stable",
       "drivingMode": "Scripted route preview, light traffic, steady 25 mph",
       "description": "Weaving area: a continuous lane-centre preview with smooth visual steering and light traffic kept clear of the demo car. Demonstration only; not autonomous-driving validation."
     },
@@ -244,7 +244,7 @@
       "highway": "i55",
       "scenario": "entrance",
       "roadType": "gore",
-      "src": "assets/i55-gore-scripted.mp4?v=20261016-repaired",
+      "src": "assets/i55-gore-scripted.mp4?v=20261016-distinct-stable",
       "drivingMode": "Scripted route preview, light traffic, steady 25 mph",
       "description": "Gore area: a continuous lane-centre preview with smooth visual steering and light traffic kept clear of the demo car. Demonstration only; not autonomous-driving validation."
     },
@@ -252,7 +252,7 @@
       "highway": "i55",
       "scenario": "entrance",
       "roadType": "curved_ramp",
-      "src": "assets/i55-curved_ramp-scripted.mp4?v=20261016-repaired",
+      "src": "assets/i55-curved_ramp-scripted.mp4?v=20261016-distinct-stable",
       "drivingMode": "Scripted route preview, light traffic, steady 25 mph",
       "description": "Curved ramp: a continuous lane-centre preview with smooth visual steering and light traffic kept clear of the demo car. Demonstration only; not autonomous-driving validation."
     },
@@ -260,7 +260,7 @@
       "highway": "sr385",
       "scenario": "straight",
       "roadType": "straight",
-      "src": "assets/sr385-straight-scripted.mp4?v=20261016-repaired",
+      "src": "assets/sr385-straight-scripted.mp4?v=20261016-distinct-stable",
       "drivingMode": "Scripted route preview, light traffic, steady 25 mph",
       "description": "Straight roadway: a continuous lane-centre preview with smooth visual steering and light traffic kept clear of the demo car. Demonstration only; not autonomous-driving validation."
     },
@@ -284,7 +284,7 @@
       "highway": "sr385",
       "scenario": "horizontal",
       "roadType": "combined",
-      "src": "assets/sr385-combined-scripted.mp4?v=20261016-repaired",
+      "src": "assets/sr385-combined-scripted.mp4?v=20261016-distinct-stable",
       "drivingMode": "Scripted route preview, light traffic, steady 25 mph",
       "description": "Combined curves: a continuous lane-centre preview with smooth visual steering and light traffic kept clear of the demo car. Demonstration only; not autonomous-driving validation."
     },
@@ -292,7 +292,7 @@
       "highway": "sr385",
       "scenario": "weaving",
       "roadType": "weaving",
-      "src": "assets/sr385-weaving-scripted.mp4?v=20261016-repaired",
+      "src": "assets/sr385-weaving-scripted.mp4?v=20261016-distinct-stable",
       "drivingMode": "Scripted route preview, light traffic, steady 25 mph",
       "description": "Weaving area: a continuous lane-centre preview with smooth visual steering and light traffic kept clear of the demo car. Demonstration only; not autonomous-driving validation."
     },
@@ -316,7 +316,7 @@
       "highway": "sr385",
       "scenario": "entrance",
       "roadType": "gore",
-      "src": "assets/sr385-gore-scripted.mp4?v=20261016-repaired",
+      "src": "assets/sr385-gore-scripted.mp4?v=20261016-distinct-stable",
       "drivingMode": "Scripted route preview, light traffic, steady 25 mph",
       "description": "Gore area: a continuous lane-centre preview with smooth visual steering and light traffic kept clear of the demo car. Demonstration only; not autonomous-driving validation."
     },
@@ -324,7 +324,7 @@
       "highway": "sr385",
       "scenario": "entrance",
       "roadType": "curved_ramp",
-      "src": "assets/sr385-curved_ramp-scripted.mp4?v=20261016-repaired",
+      "src": "assets/sr385-curved_ramp-scripted.mp4?v=20261016-distinct-stable",
       "drivingMode": "Scripted route preview, light traffic, steady 25 mph",
       "description": "Curved ramp: a continuous lane-centre preview with smooth visual steering and light traffic kept clear of the demo car. Demonstration only; not autonomous-driving validation."
     }
