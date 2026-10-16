@@ -13,7 +13,9 @@ const catalog = JSON.parse(
   await readFile(new URL("./src/road-scenarios.json", import.meta.url), "utf8"),
 );
 const images = [
-  ...catalog.recordings.map((recording) => path.basename(recording.src)),
+  ...catalog.recordings.map((recording) =>
+    path.basename(new URL(recording.src, "https://ctier.invalid/").pathname),
+  ),
   "registration-qr.svg",
   ...environments.map((item) => path.basename(item.src)),
   "ctier-logo.png",
