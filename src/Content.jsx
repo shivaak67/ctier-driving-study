@@ -125,28 +125,6 @@ export function Overview() {
           recorded simulator footage. Demonstration, not autonomous-driving
           validation.
         </p>
-        <details className="video-credits">
-          <summary>Music credit</summary>
-          <p>
-            “Dream Culture” by Kevin MacLeod ({" "}
-            <a
-              href="https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1300046"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              incompetech.com
-            </a>
-            ), licensed under{" "}
-            <a
-              href="https://creativecommons.org/licenses/by/4.0/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Creative Commons Attribution 4.0
-            </a>
-            . Edited to 140 seconds, with volume adjustments and fades.
-          </p>
-        </details>
       </section>
       <div className="container study-highlights">
         <article>
