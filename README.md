@@ -6,7 +6,7 @@ Research and participant-registration website for the University of Memphis Cent
 
 ## App pages
 
-The current `main` branch includes five pages:
+The app includes five pages:
 
 | Page | Route | Features |
 | --- | --- | --- |
@@ -15,6 +15,45 @@ The current `main` branch includes five pages:
 | Equipment | `#equipment` | Driving controls, VR headset, skin-conductance sensor, and expandable eye- and facial-tracking equipment details. |
 | Participate | `#participants` | Google Forms registration button, scannable QR code, and session confirmation guidance. |
 | Research & Contacts | `#results` | Research focus, investigator contacts, and expandable research-partner information. |
+
+## Screenshots
+
+Captured from the live Vercel app. Expand each page to view its screenshot.
+
+<details open>
+<summary>Overview</summary>
+
+![Study overview and project video](docs/screenshots/overview.jpg)
+
+</details>
+
+<details>
+<summary>Road Scenarios</summary>
+
+![Highway selectors and simulated route preview](docs/screenshots/road-scenarios.jpg)
+
+</details>
+
+<details>
+<summary>Equipment</summary>
+
+![Driving controls, VR headset, and skin-conductance sensor](docs/screenshots/equipment.jpg)
+
+</details>
+
+<details>
+<summary>Participate</summary>
+
+![Google Forms registration and QR code](docs/screenshots/participate.jpg)
+
+</details>
+
+<details>
+<summary>Research & Contacts</summary>
+
+![Research focus and study contacts](docs/screenshots/research-contacts.jpg)
+
+</details>
 
 ## Features
 
